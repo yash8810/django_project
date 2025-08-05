@@ -1,0 +1,35 @@
+{% extends 'front-base.html' %}
+{% load static %}
+{% block mainblock %}
+
+<section class="sign-up-area reset-pass-area">
+    <div class="sign-up-section-title" style="text-align: center;">
+        <h2 style="color: green;"><i class="fas fa-check-circle"></i> Thank You for Your Order!</h2>
+        <p>Your order has been placed successfully.</p>
+    </div>
+
+    <section class="product_all_collection with-sidebar">
+        <div class="vigo_container_two">
+            <div class="product_all_collection_flex" style="justify-content: center;">
+                <div class="cart-table-wrapper" style="width: 100%; max-width: 600px; text-align: center; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+                    
+                    <h4>Total Products Ordered: <strong>{{ total_quantity }}</strong></h4>
+                    <h4>Total Payment: <strong>₹{{ total_amount }}</strong></h4>
+
+                    <div style="margin-top: 30px;">
+                        <a href="{% url 'productfun' %}" class="single_add_to_cart_button"
+                           style="padding: 12px 30px; background: #007bff; color: #fff; border-radius: 5px; text-decoration: none;">
+                            <i class="fas fa-arrow-left"></i> Back to Shop
+                        </a>
+                        <a href="/" class="single_add_to_cart_button"
+                           style="padding: 12px 30px; background: #28a745; color: #fff; border-radius: 5px; text-decoration: none;">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+{% endblock %}

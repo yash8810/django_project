@@ -1,0 +1,144 @@
+{% extends 'front-base.html' %}
+{% load static %}
+
+{% block mainblock %}
+<section class="sign-up-area sign-in-area">
+    <div class="sign-up-section-title">
+        <h4>Change Password</h4>
+        <span>Update Your Account Password</span>
+    </div>
+
+    <div class="sign-in-inner">
+        <div class="sign-up-form">
+            <form action="{% url 'updateprofilePage' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <p class="sign-up-single-input">
+                    <label>Gender*</label>
+                    <select name="FitFusion.ai_user_gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Height (cm)*</label>
+                    <input type="number" name="FitFusion.ai_user_height">
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Weight (kg)*</label>
+                    <input type="number" name="FitFusion.ai_user_weight" >
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Date of Birth*</label>
+                    <input type="date" name="FitFusion.ai_user_dob" id="dob" onchange="calculateAge()">
+                    <p id="age-output"></p>
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Age</label>
+                    <input type="text" name="FitFusion.ai_user_age" id="age">
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Goal*</label>
+                    <select name="FitFusion.ai_user_goal">
+                        <option value="Weight Loss">Weight Loss</option>
+                        <option value="Muscle Gain">Muscle Gain</option>
+                        <option value="Maintain">Maintain</option>
+                    </select>
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Target Areas*</label>
+                    <input type="text" name="FitFusion.ai_user_target_areas" placeholder="E.g. Abs, Legs, Arms">
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Workout Experience*</label>
+                    <select name="FitFusion.ai_user_workout_experience" multiple>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Diet Preferences*</label>
+                    <select name="FitFusion.ai_user_diet_preferences" >
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                        <option value="Pescatarian">Pescatarian</option>
+                    </select>
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Medical Conditions</label>
+                    <select name="FitFusion.ai_user_medical_conditions" multiple>
+                        <option value="Diabetes">Diabetes</option>
+                        <option value="Hypertension">Hypertension</option>
+                        <option value="Asthma">Asthma</option>
+                        <option value="Heart Disease">Heart Disease</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </p>
+
+                <p class="sign-up-single-input">
+                    <label>Profile Image</label>
+                    <input type="file" name="FitFusion.ai_user_profile_image" accept="image/*" id="profile-image" onchange="previewImage()">
+                    <img id="image-preview" src="" alt="Profile Image" style="display: none; width: 100px; margin-top: 10px;">
+                </p>
+
+                <p class="sign-up-single-button">
+                    <input type="submit" value="Update Profile">
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Calculate Age based on the DOB input
+
+    def calculate_age(self):
+    today = date.today()
+    age = today.year - self.dob.year - ((today.month, today.day) < (self.dob.month, self.dob.day))
+    return age
+    
+    function calculateAge() {
+        const dobInput = document.getElementById('dob').value;
+        if (!dobInput) return; // Prevent errors when the input is empty
+
+        const dob = new Date(dobInput);
+        const today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+        const monthDiff = today.getMonth() - dob.getMonth();
+
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+            age--;
+        }
+
+        document.getElementById('age').value = age;
+        document.getElementById('age-output').innerText = `Your age: ${age}`;
+    }
+
+    // Preview the profile image when selected
+    function previewImage() {
+        const file = document.getElementById('profile-image').files[0];
+        if (!file) return; // Prevent errors if no file is selected
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const imagePreview = document.getElementById('image-preview');
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    }
+</script>
+
+{% endblock %}

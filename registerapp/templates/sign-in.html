@@ -1,0 +1,50 @@
+{% extends 'front-base.html' %}
+{% load static %}
+
+{% block mainblock %}
+	<section class="sign-up-area sign-in-area">
+		<div class="sign-up-section-title">
+			<h4>Sign in</h4>
+			<span>Log In To Your Account</span>
+		</div>
+
+		<div class="sign-in-inner">
+			<div class="sign-up-form">
+				<form action="{% url 'signinPage' %}" method="post">
+					{% csrf_token %}
+					<p class="sign-up-single-input">
+						<label>Email*</label>
+						<input type="email" name="FitFusion.ai_user_email" required>
+					</p>
+					<p class="sign-up-single-input">
+						<label>Password*</label>
+						<input type="password" name="FitFusion.ai_user_password" required>
+					</p>
+					<p class="sign-up-single-button">
+						<input type="submit" value="Sign in">
+					</p>
+			
+				</form>
+			</div>
+
+			<!-- <div class="sign-up-social">
+				<p>Or, Sign Up with social media</p>
+				<div class="sign-up-social-item">
+					<a href="#">
+						<i class="fab fa-facebook-f"></i>
+						<span>Facebook</span>
+					</a>
+					<a href="#">
+						<i class="fab fa-google-plus-g"></i>
+						<span>Google Plus</span>
+					</a>
+					<a href="#">
+						<i class="fab fa-twitter"></i>
+						<span>Twitter</span>
+					</a>
+				</div>
+			</div> -->
+
+		</div>
+	</section>
+{% endblock %}

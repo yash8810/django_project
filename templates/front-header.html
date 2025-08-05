@@ -1,0 +1,388 @@
+{% load static %}
+<header id="header" class="header_area hdr_area_two hdr_area_four">
+			<!-- Start top toolbar -->
+			<section class="top_toolbar top_toolbar_new">
+				<div class="vigo_container_one">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6">
+							<div class="toolbar_left">
+								<p><span>Get 30% Discounts!</span></p>
+								<div id="count_down"></div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6">
+							<div class="toolbar_right">
+								<ul>
+									<li class="search">
+										<i class="fas fa-search"></i>
+									</li>
+									<!-- <li class="cart">
+										<i class="fas fa-shopping-basket"></i>
+										<div class="cart_detail">
+											<div class="single_cart">
+												<div class="cart_left">
+													<img src="{% static 'media/images/banner-two/cart-one.png' %}" alt="">
+												</div>
+												<div class="cart_right">
+													<h3>Vaxin Regular Big Name</h3>
+													<p>$66 <sup>USD</sup></p>
+												</div>
+											</div>
+											<div class="single_cart">
+												<div class="cart_left">
+													<img src="{% static 'media/images/banner-two/cart-two.png' %}" alt="">
+												</div>
+												<div class="cart_right">
+													<h3>Vaxin Woman</h3>
+													<p>$76 <sup>USD</sup></p>
+												</div>
+											</div>
+											<div class="cart_more">
+												<a href="#">View Cart <i class="fa fa-angle-right"></i></a>
+											</div>
+										</div>
+									</li> -->
+									<li class="cart">
+										<i class="fas fa-shopping-basket"></i>
+										<div class="cart_detail">
+											{% if cart_items %}
+												{% for item in cart_items %}
+													<div class="single_cart">
+														<div class="cart_left">
+															<img src="{{ item.fitfusionai_product.fitfusionai_product_image1.url|default:'/static/images/default-product.png' }}" alt="{{ item.fitfusionai_product.fitfusionai_product_name }}">
+														</div>
+														<div class="cart_right">
+															<h3>{{ item.fitfusionai_product.fitfusionai_product_name }}</h3>
+															<p>${{ item.fitfusionai_product.fitfusionai_product_current_price }} <sup>USD</sup></p>
+														</div>
+													</div>
+												{% endfor %}
+												<div class="cart_more">
+													<a href="{% url 'cart' %}">View Cart <i class="fa fa-angle-right"></i></a>
+												</div>
+											{% else %}
+												<div class="single_cart" style="text-align: center; padding: 10px;">
+													<p>Your cart is empty.</p>
+												</div>
+											{% endif %}
+										</div>
+									</li>
+									
+									<li class="phone">
+										<a href="#">
+							<i class="fas fa-phone"></i>
+							Call +123 4567890
+						</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End top toolbar -->
+
+			<!-- Start Main Menu -->
+			<section class="header_nav">
+				<div class="vigo_container_one">
+					<div class="row">
+						<div class="col-auto mr-auto">
+							<div class="header_logo">
+								<a href="index.html">
+							<img class="logo-default" src="{% static 'media/images/home6/logo.png' %}" alt="">
+							<img class="logo-white" src="{% static 'media/images/home6/footer-logo.png' %}" alt="">
+						</a>
+							</div>
+						</div>
+						<div class="col-auto no-position">
+							<nav class="main_menu">
+								<ul id="example-one">
+									{% if not  user_name %}
+									<li>
+										<a class="current_page_item active" href="{% url 'homePage' %}">Home</a>
+									
+									</li>
+									{% else %}
+									<li>
+										<a class="current_page_item active" href="{% url 'homePage2' %}">Home</a>
+									
+									</li>
+									{% endif %}
+									<li>
+										<a href="{% url 'supplementPage' %}">Supplement</a>
+									</li>
+									<li>
+										<a href="{% url 'featurePage' %}">Feature</a>
+									</li>
+									<li>
+										<a href="{% url 'productfun' %}">Productlist</a>
+									</li>
+									<!-- <li>
+										<a href="#">Product</a>
+										<ul class="sub-menu">
+											<li><a href="{% url 'productfun' %}">Productlist</a></li>
+										
+											<li><a href="#">Collection All</a></li>
+										</ul>
+									</li> -->
+									<!--<li>
+										<a href="ingredient.html">Ingredient</a>
+									</li>-->
+									<!--<li>
+										<a href="blog.html">blog</a>
+										<ul class="sub-menu">
+											<li><a href="blog.html">blog</a></li>
+											<li><a href="{% url 'blogdetailPage' %}">blog-details</a></li>
+
+										</ul>
+									</li>-->
+									<li>
+										<a href="{% url 'aboutPage' %}">About</a>
+									</li>
+									{% if not  user_name %}
+								<li>
+										<a href="{% url 'registerPage' %}">Sign Up</a>
+									</li>
+									<li>
+										<a href="{% url 'signinPage' %}">Sign In</a>
+									</li>
+									{% endif %}
+								
+									<li>
+										<div class="navbar-welcome-message" >
+											{% if user_name %}
+											<div class="dropdown">
+												<button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+													Welcome, {{ user_name }}!
+												</button>
+												<div class="dropdown-menu" aria-labelledby="userDropdown">
+													<!-- <a class="dropdown-item" href="{% url 'profilePage' %}">Profile</a> -->
+													<a class="dropdown-item" href="{% url 'cart' %}">cart</a>
+													<!-- <a class="dropdown-item" href="#">Settings</a> -->
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+												</div>
+											</div>
+											{% else %}
+												<!-- If the user is not logged in, show the Sign In and Sign Up links -->
+												<p></p>
+											{% endif %}
+										</div>
+									</li>
+							
+									<!--<li>
+										<a href="contact.html">Contact</a>
+										<ul class="sub-menu">
+											<li><a href="contact.html">contact</a></li>
+											<li><a href="{% url 'aboutPage' %}">About</a></li>
+											<li><a href="faq.html">faq</a></li>
+											<li><a href="privacy.html">privacy</a></li>
+											<li><a href="sign-in.html">Sign in</a></li>
+											<li><a href="sign-up.html">Sign Up</a></li>
+											<li><a href="reset-pass.html">Reset Password</a></li>
+										</ul>
+									</li>-->
+							
+									<li class="inherit">
+									
+										<section class="megamenu">
+											<div class="column">
+												<div class="mm-header">
+													<h3>TOP PRODUCTS</h3>
+												</div>
+												<div class="megamenu-product-slider owl-carousel">
+													<div class="megamenu-product-highlight-single">
+														<div class="sn_related_product">
+															<div class="sn_pd_img">
+																<a href="#">
+																<img src="{% static 'media/images/popup/product-one.png' %}" alt="!">
+															</a>
+																<span>$12</span>
+															</div>
+															<div class="sn_pd_rating">
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+															</div>
+															<div class="sn_pd_detail">
+																<a href="#">
+																	<h5>Vaxin Regular (500mg), Mild Intake 150 pcs</h5>
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="megamenu-product-highlight-single">
+														<div class="sn_related_product">
+															<div class="sn_pd_img">
+																<a href="#">
+																<img src="{% static 'media/images/popup/product-two.png' %}" alt="!">
+															</a>
+																<span>$12</span>
+															</div>
+															<div class="sn_pd_rating">
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+															</div>
+															<div class="sn_pd_detail">
+																<a href="#">
+																	<h5>Vaxin Regular (500mg), Mild Intake 150 pcs</h5>
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="megamenu-product-highlight-single">
+														<div class="sn_related_product">
+															<div class="sn_pd_img">
+																<a href="#">
+																<img src="{% static 'media/images/popup/product-one.png' %}" alt="!">
+															</a>
+																<span>$12</span>
+															</div>
+															<div class="sn_pd_rating">
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+															</div>
+															<div class="sn_pd_detail">
+																<a href="#">
+																	<h5>Vaxin Regular (500mg), Mild Intake 150 pcs</h5>
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="megamenu-product-highlight-single">
+														<div class="sn_related_product">
+															<div class="sn_pd_img">
+																<a href="#">
+																<img src="{% static 'media/images/popup/product-two.png' %}" alt="!">
+															</a>
+																<span>$12</span>
+															</div>
+															<div class="sn_pd_rating">
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+																<a href="#">
+																<i class="far fa-star"></i>
+															</a>
+															</div>
+															<div class="sn_pd_detail">
+																<a href="#">
+																	<h5>Vaxin Regular (500mg), Mild Intake 150 pcs</h5>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											</div>
+											
+										</section>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-auto">
+							<div class="hdr_btn_wrapper">
+								<a href="#"><i class="fas fa-caret-right"></i> Purchase</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search_detail_two">
+					<form action="#">
+						<input type="text" placeholder="Search Your key...">
+						<button><i class="material-icons">
+				search
+				</i>
+				</button>
+					</form>
+					<div class="search_detail_two_close">
+						<i class="material-icons">
+					clear
+				</i>
+					</div>
+				</div>
+			</section>
+			<!-- End Main Menu -->
+
+			<!-- Start Mobile Menu outer-->
+			<section id="mobile-nav-wrap" class="clearfix">
+				<div class="mobile_toolbar">
+					<div class="vigo_container_one">
+						<div class="top_toolbar_right">
+							<div class="phone_number">
+								<span class="flaticon-phone-call"></span> <a href="#">+1 (895) 852–6523</a>
+							</div>
+							<div class="header_login">
+								<div class="whc_toolbar_main_login">
+									<a href="{% url 'registerPage' %}">register</a>|
+									<a href="{% url 'signinPage' %}">login</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="vigo_container_one">
+					<div class="bottom_nav bottom_nav_two">
+						<div id="mobile-logo">
+							<a href="index.html">
+						<img src="{% static 'assets/img/fav-icons/hm-two-logo.png' %}" class="svg" alt="">
+					</a>
+						</div>
+						<div class="toggle-inner">
+							<i class="fas fa-bars"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Mobile Menu outer-->
+		</header>

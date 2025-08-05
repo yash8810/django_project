@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+{% load static %}
+
+<!-- Mirrored from themeim.com/demo/gymer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2025 08:06:02 GMT -->
+<head>
+
+    
+
+	<!-- Meta Data -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block metablock %} {% endblock %}
+    
+
+	<!--<title>{% block titleblock %} Home — Fitness {% endblock %}</title>-->
+	<!-- Fav Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{%static 'frontpanel/assets/img/fav-icons/apple-touch-icon.png ' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{%static 'frontpanel/assets/img/fav-icons/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{%static 'frontpanel/assets/img/fav-icons/favicon-16x16.png' %}">
+
+	<!-- Dependency Styles -->
+	<link rel="stylesheet" href="{%static 'dependencies/bootstrap/css/bootstrap.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/fontawesome/css/fontawesome-all.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/flaticon/css/flaticon.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/owl.carousel/css/owl.carousel.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/owl.carousel/css/owl.theme.default.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/magnific-popup/magnific-popup.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/animate.css/css/animate.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/slick-carousel/css/slick.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/slick-carousel/css/slick-theme.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'dependencies/material-design-icons/css/material-icons.css' %}">
+	<link rel="stylesheet" href="{%static 'dependencies/rs-plugin/css/settings.css' %}">
+	<link rel="stylesheet" href="{%static 'dependencies/aos/css/aos.css' %}">
+	<link rel="stylesheet" href="{%static 'dependencies/rangeslider.js/css/rangeslider.css' %}">
+
+	<!-- Site Stylesheet -->
+	<link rel="stylesheet" href="{%static 'assets/css/app.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'assets/css2/subscription.css' %}" type="text/css">
+
+	<link id="theme" rel="stylesheet" href="{%static 'assets/css/theme-color/theme-default.css' %}" type="text/css">
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    {% block cssblock %} {% endblock %}
+
+	<!-- Google Web Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRoboto:300,400,500,700,900" rel="stylesheet">
+
+
+</head>
+
+<body id="home-version-1" class="home-version-1" data-style="default">
+
+	<!-- <div id="loader-wrapper">
+        <div class="loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div> -->
+
+	<div id="site">
+		{% include 'front-header.html' %}
+
+		<!--=========================-->
+		<!--=        Navbar         =-->
+		<!--=========================-->
+		
+		<section class="mobile-menu-inner mobile-menu-inner-two">
+			<div class="mobile_accor_togo">
+				<div class="mobile_accor_logo">
+					<a href="index.html">
+				<img src="{%static 'assets/img/fav-icons/hm-two-logo.png' %}" class="svg" alt="">
+			</a>
+				</div>
+				<div class="close-menu">
+					<span></span>
+				</div>
+			</div>
+			<nav id="accordian">
+				<ul class="accordion-menu">s
+					<li class="current_page_item">
+						<a href="{% url 'homePage' %}"><i class="flaticon-right-arrow-angle"></i><a href="{% url 'homePage' %}">Home One</a>Home</a>
+						<ul class="submenuItems">
+							<!--<li><i class="flaticon-right-arrow-angle"></i><a href="index.html">Home One</a></li>
+							<li><i class="flaticon-right-arrow-angle"></i><a href="index2.html">Home Two</a></li>-->
+						</ul>
+					</li>
+					<li>
+						<a href="{% url 'supplementPage' %}">Supplement</a>
+					</li>
+					<li>
+						<a href="{% url 'featurePage' %}">Feature</a>
+					</li>
+					<li>
+						<a href="#" class="dropdownlink">Productlist</a>
+						<ul class="submenuItems">
+							<li><i class="flaticon-right-arrow-angle"></i><a href="#">Productlist</a></li>
+							<li><i class="flaticon-right-arrow-angle"></i><a href="#">Products</a></li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="{% url 'aboutPage' %}">About</a>
+					</li>
+					<li>
+						<a href="{% url 'registerPage' %}">Sign Up</a>
+					</li>
+					<li>
+						<a href="{% url 'signinPage' %}">Sign In</a>
+					</li>
+					<!--<li>
+						<a href="ingredient.html">Ingredient</a>
+					</li>-->
+					<!--<li>
+						<a href="blog.html" class="dropdownlink">blog</a>
+						<ul class="submenuItems">
+							<li><i class="flaticon-right-arrow-angle"></i><a href="blog.html"> Blog</a></li>
+							<li><i class="flaticon-right-arrow-angle"></i><a href="blog-details.html"> Blog details</a></li>
+						</ul>
+					</li>-->
+					<!--<li>
+						<a href="contact.html" class="dropdownlink">about</a>
+						<ul class="submenuItems">
+							<li><i class="flaticon-right-arrow-angle"></i><a href="contact.html">Contact page</a></li>
+							<li><i class="flaticon-right-arrow-angle"></i><a href="{% url 'aboutPage' %}">About us</a></li>
+							<li><i class="flaticon-right-arrow-angle"></i><a href="privacy.html">Privacy</a></li>
+							<li><i class="flaticon-right-arrow-angle"></i><a href="reset-pass.html">Reset Pass</a></li>
+							<li><i class="flaticon-right-arrow-angle"></i><a href="faq.html">FAQ</a></li>
+						</ul>
+					</li>-->
+				</ul>
+			</nav>
+			<form action="#" id="moble-search">
+				<input type="text" placeholder="Search....">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+			<ul class="footer-social-link">
+				<li class="fb-bg"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li class="in-bg"><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<li class="tw-bg"><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li class="gp-bg"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+			</ul>
+		</section>
+		<div id="chatbot-container" style="
+		position: fixed;
+		bottom: 90px;
+		right: 20px;
+		width: 350px;
+		height: 500px;
+		background: white;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+		display: none;
+		z-index: 9998;
+		overflow: hidden;">
+		<iframe src="{% url 'chatfun' %}" style="width: 100%; height: 100%; border: none;"></iframe>
+	</div>
+
+
+		
+			<a href="#" id="chatbot-toggle" style="
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 60px;
+			height: 60px;
+			background-color: #3ad82e;
+			color: white;
+			text-align: center;
+			font-size: 24px;
+			border-radius: 50%;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+			text-decoration: none;
+			z-index: 9999;
+			display: flex;
+			justify-content: center;
+			align-items: center;">
+			<i class="fas fa-robot"></i>
+		</a>
+
+	
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const toggleBtn = document.getElementById('chatbot-toggle');
+				const chatbotContainer = document.getElementById('chatbot-container');
+		
+				toggleBtn.addEventListener('click', function (e) {
+					e.preventDefault();
+					if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+						chatbotContainer.style.display = 'block';
+					} else {
+						chatbotContainer.style.display = 'none';
+					}
+				});
+			});
+		</script>
+
+
+        {% block mainblock %} {% endblock %}
+
+    <!--==========================-->
+		<!--=        Footer         =-->
+		<!--==========================-->
+		<footer class="footer_five_area">
+			<div class="vigo_container_one">
+				<div class="footer_five_top">
+					<div class="footer_five_top_left">
+						<a href="#" class="logo">
+					<img src="{%static 'media/images/home6/footer-logo.png' %}" alt="#">
+				</a>
+					</div>
+					<div class="footer_five_top_right">
+						<form action="#">
+							<label>
+						<i class="fas fa-arrow-right"></i>
+						<span>SUBSCRIBE TO OUR NEWSLETTER FOR OFFERS & PROMOTIONALS.</span>
+					</label>
+							<input type="text" placeholder="type your email here...">
+							<button>
+						<i class="material-icons">
+						send
+						</i>
+					</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer_five_middle clearfix">
+					<div class="widget widget5">
+						<div class="widget5_about">
+							<p>Vaxin Internationals Ltd. Suite 109, Floor 5 240 New Canberra WA 1234, AUSTRALIA</p>
+						</div>
+						<div class="widget5_social">
+							<a href="#">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+							<a href="#">
+						<i class="fab fa-twitter"></i>
+					</a>
+							<a href="#">
+						<i class="fab fa-medium-m"></i>
+					</a>
+							<a href="#">
+						<i class="fab fa-tumblr"></i>
+					</a>
+						</div>
+					</div>
+					<div class="widget widget5">
+						<div class="widget5_title">
+							<h3>Company</h3>
+						</div>
+						<div class="widget5_desc">
+                            <a href="{% url 'aboutPage' %}">
+                                <i class="fas fa-caret-right"></i>
+                                About us
+                            </a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Delivery Information
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Terms & Conditions
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Privacy Policy
+					</a>
+							<a href="{% url 'faqPage' %}">
+						<i class="fas fa-caret-right"></i>
+						FAQs
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Refund Policy
+					</a>
+						</div>
+					</div>
+					<div class="widget widget5">
+						<div class="widget5_title">
+							<h3>USEFUL LINKS</h3>
+						</div>
+						<div class="widget5_desc">
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Themes & Templates
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Delivery Information
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Terms & Conditions
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Privacy Policy
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						FAQs
+					</a>
+							<a href="{% url 'faqPage' %}">
+						<i class="fas fa-caret-right"></i>
+						Refund Policy
+					</a>
+						</div>
+					</div>
+					<div class="widget widget5">
+						<div class="widget5_title">
+							<h3>from the feed</h3>
+						</div>
+						<div class="widget5_desc">
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Themes & Templates
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Delivery Information
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Terms & Conditions
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Privacy Policy
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						FAQs
+					</a>
+							<a href="#">
+						<i class="fas fa-caret-right"></i>
+						Refund Policy
+					</a>
+						</div>
+					</div>
+					<div class="widget widget5">
+						<div class="widget5_title">
+							<h3>other LInks</h3>
+						</div>
+						<div class="widget5_tweet">
+							<div id="twitter_feed"></div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_five_bottom">
+					<div class="footer_four_bottom_left">
+						<p>Copyright© <a href="#">ThemeIM</a> | All Rights Reserved</p>
+					</div>
+					<div class="footer_four_bottom_right">
+						<a href="#">
+					<img src="{%static 'media/images/home6/visa.png' %}" alt="">
+				</a>
+						<a href="#">
+					<img src="{%static 'media/images/home6/american-express.png' %}" alt="">
+				</a>
+						<a href="#">
+					<img src="{%static 'media/images/home6/discover.png' %}" alt="">
+				</a>
+						<a href="#">
+					<img src="{%static 'media/images/home6/paypal.png' %}" alt="">
+				</a>
+						<a href="#">
+					<img src="{%static 'media/images/home6/stripe.png' %}" alt="">
+				</a>
+						<a href="#">
+					<img src="{%static 'media/images/home6/nettler.png' %}" alt="">
+				</a>
+						<a href="#">
+					<img src="{%static 'media/images/home6/payoneer.png' %}" alt="">
+				</a>
+					</div>
+					<div class="backtotop">
+						<i class="fas fa-angle-double-up"></i>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+	</div>
+	<!-- /#site -->
+
+    <!-- Dependency Scripts -->
+	<script src="{%static 'dependencies/jquery/jquery.min.js' %}"></script>
+	<script src="{%static 'dependencies/popper.js/popper.min.js' %}"></script>
+	<script src="{%static 'dependencies/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{%static 'dependencies/owl.carousel/js/owl.carousel.min.js' %}"></script>
+	<script src="{%static 'dependencies/magnific-popup/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{%static 'dependencies/isotope-layout/js/isotope.pkgd.min.js' %}"></script>
+	<script src="{%static 'dependencies/slick-carousel/js/slick.min.js' %}"></script>
+	<script src="{%static 'dependencies/jquery.countdown/js/jquery.countdown.min.js' %}"></script>
+	<script src="{%static 'dependencies/gmap3/gmap3.min.js' %}"></script>
+	<script src="{%static 'dependencies/headroom/js/headroom.js' %}"></script>
+	<script src="{%static 'dependencies/countUp.js/js/countUp.min.js' %}"></script>
+	<script src="{%static 'dependencies/twitter-fetcher/js/twitterFetcher_min.js' %}"></script>
+	<script src="{%static 'dependencies/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+	<script src="{%static 'dependencies/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+	<script src="{%static 'dependencies/aos/js/aos.js' %}"></script>
+	<script async src="{%static 'platform.twitter.com/widgets.js' %}" charset="utf-8"></script>
+	<script async src="{%static 'cdn.embedly.com/widgets/platform.js' %}" charset="UTF-8"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsBrMPsyNtpwKXPPpG54XwJXnyobfMAIc"></script>
+	<script src="{%static 'dependencies/rangeslider.js/js/rangeslider.min.js' %}"></script>
+	<script src="{%static 'dependencies/waypoints/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Site Scripts -->
+	<script src="{%static 'assets/js/middle.js' %}"></script>
+	<script src="{%static 'assets/js/app.js' %}"></script>
+    
+    {% block jsblock %} {% endblock %}
+
+
+</body>
+
+
+<!-- Mirrored from themeim.com/demo/gymer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2025 08:06:10 GMT -->
+</html>

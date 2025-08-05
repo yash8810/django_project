@@ -1,0 +1,136 @@
+{% extends 'front-base.html' %}
+{% load static %}
+
+{% block mainblock %}
+<section class="sign-up-area sign-in-area">
+    <div class="sign-up-section-title">
+        <h4>Profile Information</h4>
+        <span>View & Update Your Profile </span>
+    </div>
+
+    <div class="sign-in-inner">
+        <div class="sign-up-form">
+            <form action="{% url 'updateprofilePage' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <!-- Profile Image Centered -->
+                <div style="text-align: center; margin-bottom: 20px;">
+                    {% if user.profile_image %}
+                        <img id="image-preview" src="{{ user.profile_image.url }}" alt="Profile Image" 
+                             style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #ccc;">
+                    {% else %}
+                        <img id="image-preview" src="{% static 'default-profile.png' %}" alt="Default Profile Image" 
+                             style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #ccc;">
+                    {% endif %}
+
+                    <!-- Update Profile Image Button -->
+                 
+
+                <!-- Two Column Layout -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 600px; margin: auto;">
+                    <!-- Left Side Fields -->
+                    <div>
+                        <p class="sign-up-single-input">
+                            <label>Gender*</label>
+                            <input type="text" name="FitFusion.ai_user_gender" value="{{ user.gender|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Height (cm)*</label>
+                            <input type="text" name="FitFusion.ai_user_height" value="{{ user.height|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Weight (kg)*</label>
+                            <input type="text" name="FitFusion.ai_user_weight" value="{{ user.weight|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Date of Birth*</label>
+                            <input type="text" name="FitFusion.ai_user_dob" id="dob" value="{{ user.dob|date:'Y-m-d'|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Age</label>
+                            <input type="text" name="FitFusion.ai_user_age" id="age" value="{{ age|default:'' }}" readonly>
+                        </p>
+                    </div>
+                
+                    <!-- Right Side Fields -->
+                    <div>
+                        <p class="sign-up-single-input">
+                            <label>Goal*</label>
+                            <input type="text" name="FitFusion.ai_user_goal" value="{{ user.goal|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Target Areas*</label>
+                            <input type="text" name="FitFusion.ai_user_target_areas" value="{{ user.target_areas|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Fitness Level*</label>
+                            <input type="text" name="FitFusion.ai_user_workout_experience" value="{{ user.workout_experience|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Diet Preferences*</label>
+                            <input type="text" name="FitFusion.ai_user_diet_preferences" value="{{ user.diet_preferences|default:'' }}" readonly>
+                        </p>
+                        <p class="sign-up-single-input">
+                            <label>Medical Conditions</label>
+                            <input type="text" name="FitFusion.ai_user_medical_conditions" value="{{ user.medical_conditions|default:'' }}" readonly>
+                        </p>
+                    </div>
+                </div>
+                
+                <form action="{% url 'profilePage' %}" method="post">
+                    {% csrf_token %}
+                    <p class="sign-up-button" style="display: flex; justify-content: center; margin-top: 20px;">
+                        <input type="submit" value="Update Profile"
+                               style="padding: 10px 15px; font-size: 16px; border-radius: 5px; 
+                                      cursor: pointer; border: 2px solid #00C200; 
+                                      background: transparent; color: #00C200; 
+                                      font-weight: bold; text-transform: uppercase;">
+                    </p>
+                </form>
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <form action="{% url 'changePasswordPage' %}" method="post">
+                    {% csrf_token %}
+                    <p class="sign-up-button" style="display: flex; justify-content: center; margin-top: 20px;">
+                        <input type="submit" value="Change Password"
+                               style="padding: 10px 15px; font-size: 16px; border-radius: 5px; 
+                                      cursor: pointer; border: 2px solid #00C200; 
+                                      background: transparent; color: #00C200; 
+                                      font-weight: bold; text-transform: uppercase;">
+                    </p>
+                </form>
+                </div>
+                
+                
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block customjs %}
+<script>
+    // Preview Selected Image
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function () {
+            const imagePreview = document.getElementById('image-preview');
+            imagePreview.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+    function calculateAge() {
+        const dobInput = document.getElementById('dob').value;
+        const dob = new Date(dobInput);
+        const today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+        const month = today.getMonth();
+        if (month < dob.getMonth() || (month === dob.getMonth() && today.getDate() < dob.getDate())) {
+            age--;
+        }
+        document.getElementById('age').value = age;
+        document.getElementById('age-output').innerText = `Your age: ${age}`;
+    }
+
+</script>
+
+{% endblock %}

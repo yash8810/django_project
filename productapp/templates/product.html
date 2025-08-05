@@ -1,0 +1,171 @@
+{% extends 'front-base.html' %}
+{% load static %}
+{% block mainblock %}
+<section class="breadcrumb_area">
+    <div class="vigo_container_two">
+        <div class="page_header">
+            <h1>Collection</h1>
+        </div>
+    </div>
+</section>
+<section class="product_all_collection with-sidebar">
+    <div class="vigo_container_two">
+        <div class="product_all_collection_flex">
+
+            <!-- Sidebar -->
+            <div class="product_all_collection_flex_item">
+                <div class="product_sidebar">
+
+                    <!-- Search -->
+                    <section class="widget widget_search">
+                        <div class="search-form-product">
+                            <input type="search" id="search-form" class="search-field" placeholder="Search …" value="" name="s">
+                            <button type="submit" class="search-submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Price Filter -->
+                    <section id="product-price" class="widget widget_price">
+                        <h3 class="widget_title">Filter by price</h3>
+                        <div class="price-filter-inner">
+                            <div class="price-filter">
+                                <span>Filter by price range</span>
+                                <div class="whc_range_slider_area">
+                                    <div class="whc_range_plan">
+                                        <div class="whc_range_item item1 active">$50</div>
+                                        <div class="whc_range_item item2">$15000</div>
+                                    </div>
+                                    <div class="whc_range_control">
+                                        <input type="range" min="0" max="50000">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Dynamic Categories -->
+                    <section class="widget widget_catergories">
+                        <h3 class="widget_title">Product Categories</h3>
+                        <ul class="widget_catgories">
+                            
+                            {% for category in categories %}
+                            <li><a href="?category={{ category.fitfusionai_category_id }}">{{ category.fitfusionai_category_name }}</a></li>
+                               
+                            {% endfor %}
+                        </ul>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="product_all_collection_flex_item_big">
+
+                <!-- Sorting -->
+                <div class="storefront-sorting">
+                    <form class="woocommerce-ordering" method="get">
+                        <div class="short text-right">
+                            <p>Sort By:</p>
+                            <select name="orderby" class="orderby">
+                                <option value="menu_order" selected>A-Z Alphabetically</option>
+                                <option value="popularity">Sort by popularity</option>
+                                <option value="rating">Sort by average rating</option>
+                                <option value="date">Sort by newness</option>
+                                <option value="price">Sort by price: low to high</option>
+                                <option value="price-desc">Sort by price: high to low</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Product Grid -->
+                
+                <!-- <div class="woocommerce">
+                    <div class="row g-4">
+                        {% for product in products %}
+                        <div class="col-xl-3 col-md-4 col-sm-6">
+                            <div class="card h-100 shadow-sm border-0">
+                                <a href="{% url 'product_detail' product.fitfusionai_product_id %}" class="text-decoration-none text-dark">
+                                    
+                                    <div class="product-thumb position-relative overflow-hidden">
+                                        <img src="{{ product.fitfusionai_product_image1.url|default:'/static/images/default-product.png' }}"
+                                             alt="{{ product.fitfusionai_product_name }}"
+                                             class="card-img-top img-fluid object-fit-cover" style="height: 250px; width: 100%;">
+                                    </div>
+                
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title mb-2">{{ product.fitfusionai_product_name }}</h5>
+                                        
+                                        <div class="sn_pd_rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                        </div>
+                                        
+                                        <div class="price">
+                                            <ins class="d-block text-success fw-bold mb-1">
+                                                ${{ product.fitfusionai_product_current_price }}
+                                            </ins>
+                                            <del class="text-muted">
+                                                ${{ product.fitfusionai_product_actual_price }}
+                                            </del>
+                                        </div>
+                                    </div>
+                
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div> -->
+                
+                <div class="woocommerce" style="padding: 20px;">
+                    <div class="row" style="display: flex; flex-wrap: wrap; gap: 20px;">
+                        {% for product in products %}
+                        <div class="col-xl-3 col-md-4 col-sm-6" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px); box-sizing: border-box;">
+                            <div class="card" style="height: 100%; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                                <a href="{% url 'product_detail' product.fitfusionai_product_id %}" 
+                                   style="text-decoration: none; color: inherit; display: block; height: 100%;">
+                
+                                    <div class="product-thumb" style="height: 250px; overflow: hidden;">
+                                        <img src="{{ product.fitfusionai_product_image1.url|default:'/static/images/default-product.png' }}"
+                                             alt="{{ product.fitfusionai_product_name }}"
+                                             style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                
+                                    <div class="card-body" style="padding: 15px; text-align: center;">
+                                        <h5 style="margin: 10px 0; font-size: 1.1rem;">{{ product.fitfusionai_product_name }}</h5>
+                                        
+                                        <div class="sn_pd_rating" style="color: #f5c518; margin-bottom: 10px; font-size: 14px;">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        
+                                        <div class="price">
+                                            <ins style="display: block; color: green; font-weight: bold; margin-bottom: 5px;">
+                                              <span>${{ product.fitfusionai_product_current_price }}</span>
+                                            </ins>
+                                            <del style="color: #888;"><span>${{ product.fitfusionai_product_actual_price }}</span></del>
+                                        </div>
+                                    </div>
+                
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

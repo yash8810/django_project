@@ -1,0 +1,800 @@
+[
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Palak paneer with rice",
+    "calories":550
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Upma with vegetables",
+    "calories":230
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Moong dal chilla with chutney",
+    "calories":300
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Egg bhurji with toast",
+    "calories":300
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Fruit chaat",
+    "calories":150
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Buttermilk",
+    "calories":100
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Chicken curry with rice",
+    "calories":600
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Egg sandwich",
+    "calories":220
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Poha with peanuts",
+    "calories":250
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Grilled fish with salad",
+    "calories":400
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Chana salad",
+    "calories":180
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Dal, roti, sabzi",
+    "calories":450
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Egg curry with chapati",
+    "calories":500
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Roasted makhana",
+    "calories":120
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Boiled eggs",
+    "calories":150
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Boiled eggs with fruit",
+    "calories":250
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Paneer bhurji with roti",
+    "calories":450
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Upma with vegetables",
+    "calories":230
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Roasted makhana",
+    "calories":120
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Idli with sambar",
+    "calories":300
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Paneer bhurji with roti",
+    "calories":450
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Moong dal chilla with chutney",
+    "calories":300
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Moong dal chilla with chutney",
+    "calories":300
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Fruit chaat",
+    "calories":150
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Grilled fish with salad",
+    "calories":400
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Egg bhurji with toast",
+    "calories":300
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Fruit chaat",
+    "calories":150
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Besan chilla",
+    "calories":280
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Vegetable biryani with raita",
+    "calories":600
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Grilled fish with salad",
+    "calories":400
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Chicken soup",
+    "calories":180
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Besan chilla",
+    "calories":280
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Grilled chicken with veggies",
+    "calories":480
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Chicken sausage with oats",
+    "calories":350
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Fruit chaat",
+    "calories":150
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Vegetable soup and multigrain toast",
+    "calories":350
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Egg fried rice",
+    "calories":500
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Banana with peanut butter",
+    "calories":200
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Idli with sambar",
+    "calories":300
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Yogurt with chicken bits",
+    "calories":200
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Chicken sausage with oats",
+    "calories":350
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Poha with peanuts",
+    "calories":250
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Fish fry with dal and rice",
+    "calories":550
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Boiled eggs",
+    "calories":150
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Poha with peanuts",
+    "calories":250
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Egg paratha",
+    "calories":400
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Tandoori chicken with roti",
+    "calories":480
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Omelette with veggies",
+    "calories":280
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Chicken stew with bread",
+    "calories":450
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Besan chilla",
+    "calories":280
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Dal, roti, sabzi",
+    "calories":450
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Stuffed paratha with curd",
+    "calories":400
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Egg curry with chapati",
+    "calories":500
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Egg bhurji with toast",
+    "calories":300
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Palak paneer with rice",
+    "calories":550
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Buttermilk",
+    "calories":100
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Tandoori chicken with roti",
+    "calories":480
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Grilled chicken with veggies",
+    "calories":480
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Chana salad",
+    "calories":180
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Keema with chapati",
+    "calories":550
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Stuffed paratha with curd",
+    "calories":400
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Paneer bhurji with roti",
+    "calories":450
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Khichdi with ghee and papad",
+    "calories":500
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Chicken curry with rice",
+    "calories":600
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Chicken soup",
+    "calories":180
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Boiled eggs with fruit",
+    "calories":250
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Idli with sambar",
+    "calories":300
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Buttermilk",
+    "calories":100
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Rajma chawal",
+    "calories":520
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Egg paratha",
+    "calories":400
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Vegetable soup and multigrain toast",
+    "calories":350
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Vegetable biryani with raita",
+    "calories":600
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Chana salad",
+    "calories":180
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Khichdi with ghee and papad",
+    "calories":500
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Tofu stir fry with rice",
+    "calories":480
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Tofu stir fry with rice",
+    "calories":480
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Upma with vegetables",
+    "calories":230
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Egg sandwich",
+    "calories":220
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Buttermilk",
+    "calories":100
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Egg curry with chapati",
+    "calories":500
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Chicken soup",
+    "calories":180
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Banana with peanut butter",
+    "calories":200
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Boiled eggs",
+    "calories":150
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Chana salad",
+    "calories":180
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Chicken sausage with oats",
+    "calories":350
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Chicken stew with bread",
+    "calories":450
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Poha with peanuts",
+    "calories":250
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Tandoori chicken with roti",
+    "calories":480
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Khichdi with ghee and papad",
+    "calories":500
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Vegetable paratha with curd",
+    "calories":350
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Besan chilla",
+    "calories":280
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Boiled eggs",
+    "calories":150
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Omelette with veggies",
+    "calories":280
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Banana with peanut butter",
+    "calories":200
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Fish cutlet",
+    "calories":250
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Chicken stew with bread",
+    "calories":450
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Fish cutlet",
+    "calories":250
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Rajma chawal",
+    "calories":520
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Keema with chapati",
+    "calories":550
+  },
+  {
+    "goal":"weightloss",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Moong dal chilla with chutney",
+    "calories":300
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Vegetable paratha with curd",
+    "calories":350
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Roasted makhana",
+    "calories":120
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"lunch",
+    "food_item":"Dal, roti, sabzi",
+    "calories":450
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Omelette with veggies",
+    "calories":280
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Yogurt with chicken bits",
+    "calories":200
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"veg",
+    "mealtime":"breakfast",
+    "food_item":"Vegetable paratha with curd",
+    "calories":350
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Egg fried rice",
+    "calories":500
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Vegetable soup and multigrain toast",
+    "calories":350
+  },
+  {
+    "goal":"maintenance",
+    "diet_type":"non-veg",
+    "mealtime":"dinner",
+    "food_item":"Egg fried rice",
+    "calories":500
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"lunch",
+    "food_item":"Fish fry with dal and rice",
+    "calories":550
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"non-veg",
+    "mealtime":"breakfast",
+    "food_item":"Egg bhurji with toast",
+    "calories":300
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"non-veg",
+    "mealtime":"snacks",
+    "food_item":"Chicken soup",
+    "calories":180
+  },
+  {
+    "goal":"weightgain",
+    "diet_type":"veg",
+    "mealtime":"dinner",
+    "food_item":"Stuffed paratha with curd",
+    "calories":400
+  },
+  {
+    "goal":"musclegain",
+    "diet_type":"veg",
+    "mealtime":"snacks",
+    "food_item":"Banana with peanut butter",
+    "calories":200
+  }
+]

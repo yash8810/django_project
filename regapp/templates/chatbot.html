@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AI Chatbot</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: 'Segoe UI', sans-serif;
+			background-color: #f6f6f6;
+		}
+		.chatbox {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+		}
+		.chat-header {
+			background-color: #3ad82e;
+			color: white;
+			padding: 10px 15px;
+			font-weight: bold;
+			font-size: 18px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		.chat-messages {
+			flex-grow: 1;
+			padding: 10px;
+			overflow-y: auto;
+			background-color: white;
+		}
+		.message {
+			margin-bottom: 10px;
+			line-height: 1.4;
+		}
+		.user {
+			text-align: right;
+			color: #3ad82e;
+		}
+		.bot {
+			text-align: left;
+			color: #444;
+		}
+		.chat-input {
+			display: flex;
+			padding: 10px;
+			background-color: #fff;
+			border-top: 1px solid #ccc;
+		}
+		.chat-input input {
+			flex: 1;
+			padding: 8px 10px;
+			border: 1px solid #ccc;
+			border-radius: 20px;
+			outline: none;
+		}
+		.chat-input button {
+			margin-left: 10px;
+			padding: 8px 16px;
+			background-color: #3ad82e;
+			color: white;
+			border: none;
+			border-radius: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="chatbox">
+		<div class="chat-header">GYMER BOT</div>
+		<div class="chat-messages" id="chat-messages">
+			<div class="message bot">Hi there! How can I help you today?</div>
+		</div>
+		<div class="chat-input">
+			<input type="text" id="chat-input" placeholder="Type your message...">
+			<button id="send-button">Send</button>
+		</div>
+	</div>
+
+	<script>
+		document.getElementById("send-button").addEventListener("click", sendMessage);
+
+		async function sendMessage() {
+			const input = document.getElementById('chat-input');
+			const message = input.value.trim();
+			if (!message) return;
+
+			const messagesContainer = document.getElementById('chat-messages');
+
+			// Show user message
+			const userMsg = document.createElement('div');
+			userMsg.className = 'message user';
+			userMsg.textContent = message;
+			messagesContainer.appendChild(userMsg);
+
+			input.value = '';
+			messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+			// Send to Django backend
+			try {
+				const response = await fetch("{% url 'chatAPIPage' %}", {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+						'X-CSRFToken': getCookie('csrftoken')  // Optional if CSRF is exempted
+					},
+					body: JSON.stringify({ query: message })
+				});
+
+				const data = await response.json();
+				const botReply = document.createElement('div');
+				botReply.className = 'message bot';
+				botReply.textContent = data.response || "Sorry, I couldn't understand that.";
+				messagesContainer.appendChild(botReply);
+				messagesContainer.scrollTop = messagesContainer.scrollHeight;
+			} catch (error) {
+				const errMsg = document.createElement('div');
+				errMsg.className = 'message bot';
+				errMsg.textContent = 'Oops! Something went wrong.';
+				messagesContainer.appendChild(errMsg);
+			}
+		}
+
+		// CSRF token getter (for Django)
+		function getCookie(name) {
+			let cookieValue = null;
+			if (document.cookie && document.cookie !== '') {
+				const cookies = document.cookie.split(';');
+				for (let i = 0; i < cookies.length; i++) {
+					const cookie = cookies[i].trim();
+					if (cookie.substring(0, name.length + 1) === (name + '=')) {
+						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						break;
+					}
+				}
+			}
+			return cookieValue;
+		}
+	</script>
+
+</body>
+</html>

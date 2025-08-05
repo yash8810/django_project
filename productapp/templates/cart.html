@@ -1,0 +1,79 @@
+{% extends 'front-base.html' %}
+{% load static %}
+{% block mainblock %}
+<section class="sign-up-area reset-pass-area">
+    <div class="sign-up-section-title">
+        <h4>YOUR CART</h4>
+        <span>Items you’ve added</span>
+    </div>
+
+    <section class="product_all_collection with-sidebar">
+        <div class="vigo_container_two">
+            <div class="product_all_collection_flex" style="justify-content: center;">
+                <div class="cart-table-wrapper" style="width: 100%; max-width: 1000px;">
+                    <table style="width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); font-size: 16px;">
+                        <thead>
+                            <tr style="background: #333; color: white;">
+                                <th style="padding: 15px;">Product</th>
+                                <th style="padding: 15px;">Quantity</th>
+                                <th style="padding: 15px;">Price</th>
+                                <th style="padding: 15px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if cart_items %}
+                                {% for item in cart_items %}
+                                    <tr style="text-align: center;">
+                                        <td style="padding: 15px;">{{ item.fitfusionai_product.fitfusionai_product_name }}</td>
+                                        <td style="padding: 15px;">{{ item.fitfusionai_cart_quantity }}</td>
+                                        <td style="padding: 15px;">₹{{ item.fitfusionai_product.fitfusionai_product_price }}</td>
+                                        <!--<td style="padding: 15px;">₹{{ item.fitfusionai_product.fitfusionai_product_price|floatformat:2|add:item.fitfusionai_cart_quantity|floatformat:2 }}</td>-->
+                                        <td style="padding: 15px;">
+                                           
+                                            <a href="{% url 'remove_cart_item' item.fitfusionai_cart_id %}" title="Remove">
+                                                <i class="fas fa-trash" style="cursor:pointer; margin: 0 10px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr style="text-align: center; font-weight: bold; background: #f5f5f5;">
+                                    <td colspan="3" style="padding: 15px; text-align: right;">Total</td>
+                                    <td colspan="2" style="padding: 15px; text-align: left;">₹{{ total_price }}</td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="5" style="padding: 20px; text-align: center;">Your cart is empty.</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+
+                    <!-- <div style="margin-top: 30px; text-align: center;">
+                        <a href="#" class="single_add_to_cart_button"
+                        style="padding: 12px 30px; background: #28a745; color: #fff; border-radius: 5px; text-decoration: none; font-size: 16px;">
+                            <i class="fas fa-credit-card" style="margin-right: 8px;"></i> PROCEED TO CHECKOUT
+                        </a>
+                    </div> -->
+                    
+
+                    <div style="margin-top: 30px; text-align: center;">
+                        <a href="{% url 'productfun' %}" class="single_add_to_cart_button"
+                           style="padding: 12px 30px; background: #007bff; color: #fff; border-radius: 5px; text-decoration: none;">
+                            <i class="fas fa-arrow-left"></i> Back to Shop
+                        </a>
+                        <!-- <a href="{% url 'checkout_success' %}" class="single_add_to_cart_button"
+                        style="padding: 12px 30px; background: #28a745; color: #fff; border-radius: 5px; text-decoration: none; font-size: 16px;">
+                        <i class="fas fa-credit-card" style="margin-right: 8px;"></i> PROCEED TO CHECKOUT
+                        </a> -->
+                        <a href="{%  url 'checkoutPage' %}" class="single_add_to_cart_button"
+                        style="padding: 12px 30px; background: #28a745; color: #fff; border-radius: 5px; text-decoration: none; font-size: 16px;">
+                        <i class="fas fa-credit-card" style="margin-right: 8px;"></i> PROCEED TO CHECKOUT
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'front-base.html' %}
+{% load static %}
+{% block mainblock %}
+		<section class="sign-up-area">
+			<div class="sign-up-section-title">
+				<h4>REGISTER</h4>
+				<span>Create Your Account Now!</span>
+			</div>
+			<div class="sign-up-inner">
+				<div class="sign-up-form">
+					<form action="{% url 'registerPage' %}" method="post">
+						{% csrf_token %}
+						<p class="sign-up-single-input">
+							<label>FIRST NAME*</label>
+							<input type="text" name="FitFusion.ai_user_first_name">
+						</p>
+						<p class="sign-up-single-input">
+							<label>LAST NAME*</label>
+							<input type="text" name="FitFusion.ai_user_last_name">
+						</p>
+						<p class="sign-up-single-input">
+							<label>EMAIL ADDRESS*</label>
+							<input type="text" name="FitFusion.ai_user_email">
+						</p>
+						<p class="sign-up-single-input">
+							<label>CONTACT NUMBER</label>
+							<input type="text" name="FitFusion.ai_user_contact_number">
+						</p>
+						<p class="sign-up-single-input">
+							<label>PASSWORD*</label>
+							<input type="password" name="FitFusion.ai_user_password">
+						</p>
+						<p class="sign-up-single-input">
+							<label>CONFIRM PASSWORD*</label>
+							<input type="password" name="FitFusion.ai_user_confirm_password">
+						</p>
+						<p class="sign-up-single-button">
+							<input type="submit" value="CREATE MY ACCOUNT">
+						</p>
+						<p class="sign-up-single-checkbox">
+							<label>
+						<input type="checkbox">
+						SIgn up to get our weekly updates & offers. We do not spam.
+					</label> Already have an account? <a href="{% url 'signinPage' %}">SIgn In</a>
+						</p>
+					</form>
+				</div>
+				<!--<div class="sign-up-social">
+					<p>Or, Sign Up with social media</p>
+					<div class="sign-up-social-item">
+						<a href="#">
+					<i class="fab fa-facebook-f"></i>
+					<span>Facebook</span>
+				</a>
+						<a href="#">
+					<i class="fab fa-google-plus-g"></i>
+					<span>Google Plus</span>
+				</a>
+						<a href="#">
+					<i class="fab fa-twitter"></i>
+					<span>Twitter</span>
+				</a>
+					</div>
+				</div> -->
+			</div>
+		</section>
+		{% endblock %}

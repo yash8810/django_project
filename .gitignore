@@ -1,0 +1,27 @@
+.env
+ 
+# Ignore migrations except for the __init__.py files
+**/migrations/*
+!**/migrations/__init__.py
+ 
+# Ignore __pycache__ folders
+**/__pycache__/*
+ 
+
+ 
+# Ignore local settings
+local_settings.py
+
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore virtual environment
+env/
+
+# Ignore uploads folder
+uploads/
+
+.env/
+
+migrations/

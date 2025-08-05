@@ -1,0 +1,134 @@
+{% extends 'front-base.html' %}
+{% load static %}
+{% block mainblock %}
+
+<!-- Breadcrumb -->
+<section class="breadcrumb_area_list">
+    <div class="vigo_container_two">
+        <div class="page_header_list">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'productfun' %}">Shop</a></li>
+                <!-- <li><a href="{{ product.fitfusionai_category.fitfusionai_category_name }}">{{ product.fitfusionai_category.fitfusionai_category_name }}</a></li> --> -->
+                <li>{{ product.fitfusionai_product_name }}{% if product.fitfusionai_product_dosage %} ({{ product.fitfusionai_product_dosage }}mg){% endif %}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Product Detail Section -->
+<section class="ingredeint_section ingredeint2_section ingredeint4_section">
+    <div class="vigo_container_two">
+        <div class="ingredient_slider_flex">
+
+            <!-- Left Image Slider -->
+            <div class="ingredient_slider_main">
+                <div class="ingredient_slider_one">
+                    {% for img in product_images %}
+                    <div>
+                        <img src="{{ img.url }}" alt="{{ product.fitfusionai_product_name }} - small">
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="ingredient_slider_two">
+                    {% for img in product_images %}
+                    <div>
+                        <div class="ingredient-img">
+                            <img src="{{ img.url }}" alt="{{ product.fitfusionai_product_name }} - large">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Right Product Info -->
+            <div class="ingredient_slider_detail">
+                <h4 class="product_title">
+                    {{ product.fitfusionai_product_name }}
+                    {% if product.fitfusionai_product_dosage %}
+                        ({{ product.fitfusionai_product_dosage }}mg)
+                    {% endif %}
+                </h4>
+
+                <!-- Rating -->
+                <p class="product_ratting woocommerce-product-rating">
+                    {% for i in "12345" %}
+                    <a href="#"><i class="far fa-star"></i></a>
+                    {% endfor %}
+                    <span>({{ product.review_count|default:"30" }} Reviews)</span>
+                    <a href="#reviews" class="write_scroll_review" data-moveto=".review_nav">
+                        <span class="write_review"><i class="fas fa-pencil-alt"></i> Write a review</span>
+                    </a>
+                </p>
+
+                <!-- Description -->
+                <div class="product_desc">
+                    <p>{{ product.fitfusionai_product_description }}</p>
+                </div>
+
+                <!-- Quantity Options (static now) -->
+                <div class="product_quantity">
+                    <h4>Select A Quantity:</h4>
+                    <ul>
+                        <li class="border">100 <span>Tablets</span></li>
+                        <li>150 <span>Tablets</span></li>
+                        <li>200 <span>Tablets</span></li>
+                    </ul>
+                </div>
+
+                <!-- Pricing & Stock -->
+                <div class="product_price">
+                    {% if product.fitfusionai_product_stock > 0 %}
+                        <p class="in-stock">IN STOCK</p>
+                    {% else %}
+                        <p class="out-stock">OUT OF STOCK</p>
+                    {% endif %}
+
+                    <!-- <div class="price">
+                        <ins><span>${{ product.fitfusionai_product_current_price }}</span></ins>
+                        {% if product.fitfusionai_product_actual_price > product.fitfusionai_product_current_price %}
+                        <del><span>${{ product.fitfusionai_product_actual_price }}</span></del>
+                        {% endif %}
+                    </div> -->
+                    <div class="price">
+                        <ins><span>${{ product.fitfusionai_product_current_price }}</span></ins>
+                        {% if product.fitfusionai_product_actual_price and product.fitfusionai_product_actual_price != product.fitfusionai_product_current_price %}
+                            <del><span>${{ product.fitfusionai_product_actual_price }}</span></del>
+                        {% endif %}
+                    </div>
+                    
+                    
+                </div>
+
+
+                <!-- Add to Cart Form or Out of Stock Message -->
+                {% if product.fitfusionai_product_stock > 0 %}
+                <form action="{% url 'add_to_cart' product.fitfusionai_product_id %}" method="post" class="product-cart">
+                    {% csrf_token %}
+                    <div class="product-quantity quantity">
+                        <input id="Quantity" name="quantity" value="1" type="number" min="1" class="cart__quantity-selector">
+                        <input value="-" type="button" class="qtyminus looking">
+                        <input value="+" type="button" class="qtyplus looking">
+                    </div>
+                    <div class="ingredient_slider_btn">
+                        <button type="submit" class="single_add_to_cart_button">
+                            <i class="fas fa-shopping-cart"></i> ADD TO CART
+                        </button>
+                        <!-- <a class="this_heart" href="#"><i class="far fa-heart"></i></a> -->
+                    </div>
+                </form>
+                {% else %}
+                <div class="ingredient_slider_btn">
+                    <button class="single_add_to_cart_button" disabled style="background: #ccc; cursor: not-allowed;">
+                        <i class="fas fa-exclamation-circle"></i> OUT OF STOCK
+                    </button>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
