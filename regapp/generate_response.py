@@ -1,14 +1,9 @@
-from llama_cpp import Llama
 from . import retriever
+from groq import Groq
+import os
 
-# Load local GGUF model (set the actual path)
-llm = Llama(
-    model_path="D:\\gymer\\intern_model.gguf",  # 👈 UPDATE this to your actual .gguf file path
-    n_ctx=2048,
-    n_gpu_layers=20,  # adjust based on your GPU (1650 Ti can handle ~20-30 layers)
-    n_threads=8,
-    verbose=True
-)
+# Initialize Groq client
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def generate_response(user_query, user_data=None):
     """Generate a short and accurate LLM response based on retrieved data and optional user data."""
@@ -34,14 +29,19 @@ Retrieved Context:
 {retrieved_context}
 """
 
-    result = llm(
-        prompt=prompt.strip(),
+    # Call Groq LLM
+    result = client.chat.completions.create(
+        model="llama3-8b-8192",  # You can change this to other Groq-supported models
+        messages=[
+            {"role": "system", "content": "You are a helpful and professional marketing assistant."},
+            {"role": "user", "content": prompt.strip()}
+        ],
         max_tokens=200,
         temperature=0.3,
         top_p=0.8
     )
 
-    return result["choices"][0]["text"].strip()
+    return result.choices[0].message.content.strip()
 
 # For testing
 if __name__ == "__main__":
