@@ -44,7 +44,7 @@ jobs:
  
           docker build -t fitfusionai-django .
  
-          docker run -d -p 8000:8000 --name fitfusionai-django \
+          docker run -d -p 5003:8000 --name fitfusionai-django \
             -e DB_USER="$DB_USER" \
             -e DB_PASSWORD="$DB_PASSWORD" \
             -e DB_HOST="$DB_HOST" \
