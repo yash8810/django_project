@@ -6,7 +6,7 @@ until pg_isready -h db -p 5432 -U postgres; do
 done
  
 echo "PostgreSQL is ready!"
- 
+# Set environment variables from .env file
 # Apply database migrations
 python manage.py migrate --noinput
  
