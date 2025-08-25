@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Upload Successful - Document Intelligence{% endblock %}
+
+{% block content %}
+<div class="success-container">
+    <div class="success-card">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Upload Successful!</h2>
+        <p>Your document has been successfully uploaded and is ready for analysis.</p>
+        <div class="success-actions">
+            <a href="{% url 'uploadDocument' %}" class="btn-primary">
+                <i class="fas fa-upload"></i> Upload Another
+            </a>
+            <a href="{% url 'dashboard' %}" class="btn-secondary">
+                <i class="fas fa-tachometer-alt"></i> Return to Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

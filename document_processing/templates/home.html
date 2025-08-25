@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Document Intelligence{% endblock %}
+
+{% block content %}
+<div class="full-screen-container">
+    <div class="form-container">
+        <div class="form-box home-box">
+            <div class="form-header">
+                <h2>Welcome to Document Intelligence</h2>
+            </div>
+            <div class="animated-form">
+                <div class="welcome-content">
+                    <div class="welcome-icon">
+                        <i class="document-icon">📄</i>
+                    </div>
+                    <div class="welcome-text">
+                        <p>Your intelligent document management solution</p>
+                        <p>Upload, analyze, and extract insights from your documents</p>
+                    </div>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>Upload</h3>
+                        <p>Securely upload your PDF documents</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Analyze</h3>
+                        <p>Get AI-powered document analysis</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Extract</h3>
+                        <p>Extract key information automatically</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Manage</h3>
+                        <p>Organize your document collection</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Query</h3>
+                        <p>Ask questions and get answers from your documents</p>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <a href="{% url 'register' %}" class="btn-submit">Get Started</a>
+                    <p class="form-link">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

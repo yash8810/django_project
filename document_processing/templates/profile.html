@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile - Document Intelligence{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-box profile-box">
+        <div class="form-header">
+            <h2>User Profile</h2>
+        </div>
+        <div class="animated-form">
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <div class="avatar-circle">
+                        <span class="avatar-initials">{{ user.username.0|upper }}</span>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <div class="profile-item">
+                        <div class="item-label">Username</div>
+                        <div class="item-value">{{ user.username }}</div>
+                    </div>
+                    <div class="profile-item">
+                        <div class="item-label">Email</div>
+                        <div class="item-value">{{ user.email }}</div>
+                    </div>
+                    <div class="profile-item">
+                        <div class="item-label">Member Since</div>
+                        <div class="item-value">{{ user.date_joined|date:"F d, Y" }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Documents</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Analyses</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Reports</div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <a href="{% url 'dashboard' %}" class="btn-submit">Go to Dashboard</a>
+                <p class="form-link">
+                    Need to make changes? <a href="{% url 'editProfile' %}">Edit Profile</a>
+                </p>
+                <p class="form-link">
+                    Forgot your password? <a href="{% url 'changePassword' %}">Change Password</a>
+                </p>
+                <a href="{% url 'logout' %}" class="btn-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

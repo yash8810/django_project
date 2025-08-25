@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Upload Document - Document Intelligence{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-box upload-box">
+        <div class="form-header">
+            <h2><i class="fas fa-upload"></i> Upload Document</h2>
+        </div>
+        
+        <form id="upload-form" method="POST" enctype="multipart/form-data" class="animated-form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="file_name" class="form-label">Document Name (optional)</label>
+                <input type="text" id="file_name" name="file_name" class="form-control">
+            </div>
+            
+            <div class="upload-area">
+                <label for="file" class="file-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Choose PDF File</span>
+                </label>
+                <input type="file" name="pdf_file" id="file" class="file-input" accept=".pdf" required>
+                <p class="upload-hint">Drag and drop your PDF file here or click to select</p>
+            </div>
+            
+            <div class="form-footer">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-upload"></i> Upload Document
+                </button>
+                <a href="{% url 'dashboard' %}" class="btn btn-outline">
+                    <i class="fas fa-times"></i> Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

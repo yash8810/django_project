@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login - Document Intelligence{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-box login-box">
+        <div class="form-header">
+            <h2>Login</h2>
+        </div>
+
+        <!-- Display error/success messages -->
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <form method="POST" class="animated-form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <input type="text" id="username" name="username" required>
+                <label for="username">Username</label>
+                <div class="bar"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+                <div class="bar"></div>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="btn-submit">Login</button>
+                <p class="form-link">Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

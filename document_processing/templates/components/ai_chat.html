@@ -1,0 +1,70 @@
+<div class="ai-chat-container">
+    <div class="ai-chat-messages chat-box" id="chat-box">
+        <div class="ai-message">
+            <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="message-content">
+                <p>Hello! I'm your Document AI Assistant. Ask me anything about your uploaded documents.</p>
+            </div>
+        </div>
+    </div>
+    
+    <form id="ai-chat-form" method="POST" action="{% url 'askAi' %}" data-ajax="true">
+        {% csrf_token %}
+        <input type="hidden" name="document_id" id="selected-document-id" value="{{ document.id|default:'' }}">
+        <div class="chat-input-container">
+            <input type="text" 
+                   name="question" 
+                   id="user-message"
+                   placeholder="Type a message..." 
+                   required
+                   autocomplete="off">
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Send
+            </button>
+        </div>
+    </form>
+
+    {% comment %} {% if uploadedPdfs %}
+    <div class="document-selection" style="margin-top: 20px;">
+        <h4><i class="fas fa-file-alt"></i> Ask about a specific document:</h4>
+        <select id="document-selector" class="form-control">
+            <option value="1000">All Documents</option>
+            {% for document in uploadedPdfs %}
+            <option value="{{ document.id }}">{{ document.file_name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% endif %} {% endcomment %}
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+  <script>
+    document.getElementById("document-selector").addEventListener("change", function () {
+      const selectedId = this.value;
+      document.getElementById("selected-document-id").value = selectedId;
+
+  
+      fetch("{% url 'set_selected_document' %}", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": "{{ csrf_token }}",
+        },
+        body: JSON.stringify({ document_id: selectedId }),
+      })
+      .then(response => {
+        if (!response.ok) throw new Error("Failed to save selection");
+        return response.json();
+      })
+      .then(data => {
+        console.log("Document ID stored in session:", data);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+    });
+  </script>
+  

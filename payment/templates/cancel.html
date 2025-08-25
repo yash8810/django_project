@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h4>Payment Cancelled</h4>
+                </div>
+                <div class="card-body">
+                    <p>Your payment was cancelled.</p>
+                    <p>You can try again if you change your mind.</p>
+                    <a href="{% url 'checkout' %}" class="btn btn-primary">Try Again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Document Intelligence{% endblock %}
+
+<a href="{% url 'subscription' %}">Subscription</a>
+
+
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1>Welcome, {{ request.user.username }}</h1>
+        <div class="dashboard-actions">
+            <a href="{% url 'uploadDocument' %}" class="btn btn-primary">
+                <i class="fas fa-upload"></i> Upload Document
+            </a>
+            <a href="{% url 'allDocuments' %}" class="btn btn-secondary">
+                <i class="fas fa-list"></i> View All Documents
+            </a>
+        </div>
+    </div>
+
+    <div class="recent-documents">
+        <h2>Recent Documents</h2>
+        <div class="document-grid" id="documentGrid">
+            {% for pdf in uploadedPdfs %}
+            <div class="document-card">
+                <div class="document-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <div class="document-info">
+                    <h3>{{ pdf.file_name }}</h3>
+                    <p>Uploaded: {{ pdf.uploaded_at|date:"M d, Y" }}</p>
+                    <div class="document-actions">
+                        <a href="{% url 'viewDocument' pdf.id %}" class="btn-action">
+                            <i class="fas fa-eye"></i> View
+                        </a>
+                        <a href="{% url 'analyzePdf' pdf.id %}" class="btn btn-primary btn-sm">
+                            <i class="fas fa-chart-bar"></i> Analyze
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="empty-state">No documents uploaded yet.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Recent Analysis -->
+<div class="documents-section">
+    <h2 class="section-title">
+        <i class="fas fa-chart-bar"></i> Recent Analysis
+    </h2>
+    
+    {% if recentAnalyses %}
+    <div class="documents-grid">
+        {% for analysis in recentAnalyses %}
+        <div class="document-card">
+            <div class="document-icon" style="background-color: var(--success-color);">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="document-info">
+                <h3 class="document-title">Analysis: {{ analysis.document.file_name }}</h3>
+                <p class="document-meta">
+                    <i class="fas fa-calendar-alt"></i> {{ analysis.created_at|date:"M d, Y" }}
+                </p>
+                <div class="document-actions">
+                    <a href="#" class="btn btn-primary btn-sm">
+                        <i class="fas fa-search"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-success btn-sm">
+                        <i class="fas fa-download"></i> Report
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="#" class="btn btn-outline">
+            <i class="fas fa-list"></i> View All Analysis
+        </a>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>No analysis performed yet.</p>
+        {% if uploadedPdfs %}
+        <a href="{% url 'allDocuments' %}" class="btn btn-primary">
+            <i class="fas fa-chart-bar"></i> Analyze a Document
+        </a>
+        {% else %}
+        <p>Upload documents first to perform analysis.</p>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+
+<!-- AI Q&A Section -->
+<div class="documents-section">
+    <h2 class="section-title">
+        <i class="fas fa-robot"></i> Document AI Assistant
+    </h2>
+    {% include "components/ai_chat.html" %}
+</div>
+
+<script src="{% static 'assets/js/scripts.js' %}"></script>
+{% endblock %}

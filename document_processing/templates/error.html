@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Error - Document Intelligence{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-box error-box">
+        <div class="form-header">
+            <h2>Error</h2>
+        </div>
+        <div class="error-message">
+            <p>Oops! Something went wrong. Please try again later.</p>
+        </div>
+        <div class="form-footer">
+            <a href="/dashboard/" class="btn-submit">Go to Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

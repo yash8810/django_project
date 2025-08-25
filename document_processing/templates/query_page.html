@@ -1,0 +1,16 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Results:</h2>
+{% if results %}
+    <ul>
+    {% for result in results %}
+        <li><strong>Document:</strong> {{ result.doc_index }} <br> <strong>Chunk:</strong> {{ result.text|slice:":200" }}...</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}

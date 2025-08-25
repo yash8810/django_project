@@ -1,0 +1,494 @@
+[
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 0,
+    "text": "S1_Module_1Introduction\nSyllabus\n\nWhat\tis\tOperating\tSystem(OS)?\u00a7A\t\tComputer\tconsist\tof\tvarious\thardwares\tsuchas\nProcessorRAMKeyboard &MouseHard DiskMonitorPrinterWho\tmanages\t(controls)\tthese\thardwares???\tOperatingSystem"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 1,
+    "text": "Definition\tof\tOperating\tSystem\u2022An\tOperating\tSystem\t(OS)\tis\ta\tcollection\tof\tsoftwarethatomanages\thardwareresourcesoprovides\tvarious\tservice\tto\ttheusers\nExamples\tof\tOperating\tSystemExamples  ofOperating  System\n6"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 2,
+    "text": "6\nOperating\tsystem\tis\tlike\tGovernment\u2022Operating\tsystem\tprovide\tthe\tmeans\tfor\tproper\tuse\tof\tsystem\tresources.\u2022Government\talso\tprovides\tfacilities\tto\tthe\tpeoples\tlike\tproviding\tjob\topportunities,\tmaking\tnew\tplans\tfor\tfacilities\tof\tpeoples,\tsolve\tproblems\tof\tpeoples.\u2022Like\ta\tgovernment,\tOS\tperforms\tno\tuseful\twork\titself\tbut\tit\tprovide\tan\tenvironment\tto\tuse\tthe\tcomputer\tsystem.\tSo,\toperating\tsystem\tis\tsimilar\tto\tgovernment."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 3,
+    "text": "Goals\tof\tan\tOperating\tSystem\u2022Convenience:\tSimplify\tthe\texecution\tof\tuser\tprograms\tand\tmake\tsolving\tuser\tproblems\teasier\u2022Efficiency:\tUse\tcomputer\thardware\tefficiently\u2013Allow\tsharing\tof\thardware\tand\tsoftware\tresources.\u2022Make\tapplication\tsoftware\tportable\tand\tversatile\u2022Provide\tisolation,\tsecurity\tand\tprotection\tamong\tuser\tprograms\u2022Improve\toverall\tsystem\treliability"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 4,
+    "text": "Why\tshould\tI\tstudy\tOperating\tSystems?\u2022Need\tto\tunderstand\tinteraction\tbetween\tthe\thardware\tand\tapplications\u2013New\tapplications,\tnew\thardware\u2022Need\tto\tunderstand\tbasic\tprinciples\tin\tthe\tdesign\tof\tcomputer\tsystems\u2013efficient\tresource\tmanagement,\tsecurity,\tflexibility\u2022Increasing\tneed\tfor\tspecialized\toperating\tsystems\t\t\u2013e.g.\tembedded\toperating\tsystems\tfor\tdevices\t-\tcell\tphones,\tsensors\tand\tcontrollers\u2013real-time\toperating\tsystems\t\u2013\tvehicles,\taircraft\tcontrol,\tmultimedia\tservices"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 5,
+    "text": "History\tof\tOperating\tSystems"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 6,
+    "text": "History\tof\tOS\t(First\tgeneration)First\tgeneration\t(1945-1955)\u2022Vacuum\ttubes\tand\tplug-boards\tare\tused\tin\tthese\tsystems.\nVacuumtubes\nPlugboard\nHistory\tof\tOS\t(Second\tgeneration)vSecond\tgeneration(1955-1965)\u2022Transistors\tare\tused\tin\tthesesystems\u2022Themachinethatareproducedarecalledmainframes.\u2022Batch\tsystems\twas\tused\tforprocessing.\n20"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 7,
+    "text": "20\nHistory\tof\tOS\t(Third\tgeneration)vThirdgeneration(1965-1980)\u2022Integratedcircuits(IC's)areusedinplaceoftransistorsinthesecomputers.\u2022Itprovidesmultiprogramming(theabilitytohaveseveralprogramsinmemoryatonce,eachinitsownmemorypartition).\n13\nHistory\tof\tOS\t(Fourth\tgeneration)vFourth\tgeneration\t(1980-present)\u2022PersonalComputers\u2022LSI(LargeScaleIntegration)circuits,chipscontainingthousandsoftransistorsareusedinthesesystems.\n14"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 8,
+    "text": "14\nEarly\tSystems\t-\tBare\tMachine\t(1950s)\u2022Structure\u2022Large\tmachines\trun\tfrom\tconsole\u2022Single\tuser\tsystem\u2013Programmer/User\tas\toperator\u2022Paper\ttape\tor\tpunched\tcards\u2022Early\tsoftware\t\u2022Assemblers,\tcompilers,\tlinkers,\tloaders,\tdevice\tdrivers,\tlibraries\tof\tcommon\tsubroutines.\u2022Inefficient\tuse\tof\texpensive\tresources\u2022Low\tCPU\tutilization,\thigh\tsetup\ttime.\nFrom\tJohn\tOusterhout\tslidesHardware\t\u2013\texpensive\t;\tHuman\t\u2013\tcheap"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 9,
+    "text": "Simple\tBatch\tSystems\t(1960\u2019s)\u2022Batch\toperating\tsystem\tis\tone\twhere\tprograms\tand\tdata\tare\tcollected\ttogether\tin\ta\tbatch\tbefore\tprocessing\tstarts.\t\u2022A\tjob\tis\tpredefined\tsequence\tof\tcommands,\tprograms\tand\tdata\tthat\tare\tcombined\tin\tto\ta\tsingle\tunit\tcalled\tjob.\u2022Reduce\tsetup\ttime\tby\tbatching\tjobs\twith\tsimilar\trequirements.\u2022Early\tsystems\t-\tone\tjob\tat\ta\ttime\u2022Programmers\twould\tsubmit\ttheir\tprograms\tto\toperator.\u2013And\toperator\twould\tsort\tprograms\tinto\tbatches\twith\tsimilar\trequirements.\nSimple\tBatch\tSystems"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 10,
+    "text": "Simple\tBatch\tSystems\u2022Advantages\u2013Move\tmuch\tof\tthe\twork\tof\tthe\toperator\tto\tthe\tcomputer.\u2013Increased\tperformance\tsince\tit\twas\tpossible\tfor\tjob\tto\tstart\tas\tsoon\tas\tthe\tprevious\tjob\tfinished.\u2022Problems\u2013Turn\taround\ttime\tcan\tbe\tlarge\tfrom\tuser\tstandpoint.\u2013Low\tCPU\tutilization\t\u2022I/O\tand\tCPU\tcould\tnot\toverlap;\t\t\tslow\tmechanical\tdevices.\u2013Lack\tof\tinteraction\tbetween\tthe\tuser\tand\tthe\tjob\twhile\tjob\tis\texecuting"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 11,
+    "text": "Simple\tBatch\tSystems\u2013Batch\tSystems\tare\tappropriate\tfor\tExecuting\tlarge\tjobs\tthat\tneed\tlittle\tinteraction.\nMultiprogramming\tOperating\tSystemSeveral\tjobs\tare\tkept\tin\tmain\tmemory\tat\tthe\tsame\ttime,\tand\tthe\tCPU\tis\tmultiplexed\tamong\tthem."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 12,
+    "text": "Multiprogramming\tOS\u2022Multiprogramming\tincreases\tCPU\tutilization\u2022Multiple\tjobs\tare\tloaded\tinto\tmain\tmemory\tand\tone\tis\tselected\tfrom\tpool\tfor\texecution\tby\tCPU\u2022If\tat\tsome\tpoint\tprogram\tin\tprogress\trequires\tservice\tof\ta\tperipheral\tdevice,\tthe\tcontrol\tof\tCPU\tis\tgiven\tto\tnext\tjob\tin\tthe\tpool\u2022In\tthis\tway\tCPU\tis\talways\texecuting\tsome\tprogram\tinstead\tof\twaiting.\nCPU\tusage\tis\tpoor\twhen\tonly\tone\tprogram\tis\tpresent\tin\tmemory"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 13,
+    "text": "\u2022If\tmemory\tcan\thold\tseveral\tprograms,\tthen\tCPU\tcan\tswitch\tto\tanother\tone\twhenever\ta\tprogram\tis\tawaiting\tfor\tan\tI/O\tto\tcomplete\tThis\tis\tmultitasking\t(multiprogramming)"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 14,
+    "text": "Example:\t3\tjobs\tare\tsubmitted\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tJOB1\t\t\t\t\t\t\t\t\t\t\t\t\tJOB2\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tJOB3Type\tof\tjob\tHeavy\tcompute\t\t\t\t\t\t\t\t\t\tHeavy\tI/O\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHeavy\tI/ODuration\t\t\t\t\t\t\t5\tmin.\t\t\t\t\t\t\t\t\t\t\t\t\t\t15\tmin.\t\t\t\t\t\t\t\t\t\t\t10\tmin.Memory\treq.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t50K\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t100\tK\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t80\tKNeed\tdisk?\t\t\t\t\t\t\t\t\tNo\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYesNeed\tterminal\t\t\t\t\t\t\t\t\t\t\t\t\tNo\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYes\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNoNeed\tprinter?\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 15,
+    "text": "r?\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYes"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 16,
+    "text": "Advantages\tof\tMultiprogrammingUniprogramming\tMultiprogrammingProcessor\tuse\t17%\t33%Memory\tuse\t33%\t67%Disk\tuse\t33%\t67%Printer\tuse\t33%\t67%Elapsed\ttime\t30\tmin.\t15\tmin.Throughput\trate\t\t\t\t\t6\tjobs/hr\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t12\tjobs/hrMean\tresponse\ttime\t18\tmin.\t\t\t\t\t\t\t\t\t\t\t\t\t10\tmin."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 17,
+    "text": "Multiprogramming\u2022Advantages\u20131.\tHigh\tCPU\tutilization.\u20132.\tIt\tappears\tthat\tmany\tprograms\tare\tallotted\tCPU\talmost\tsimultaneously.\u2022Disadvantages\u20131.\tCPU\tscheduling\tis\trequires.\u20132.\tTo\taccommodate\tmany\tjobs\tin\tmemory,\tmemory\tmanagement\tis\trequired.\u2013Multiprogramming\tdoes\tnot\tsupport\tinteraction\twith\tusers"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 18,
+    "text": "Time\tSharing\tsystem\t(TSS)\u2022Multiprogramming\tdoes\tnot\tsupport\tinteraction\twith\tusers\u2022TSS\tis\tlogical\t\textension\tof\tmultiprogramming\tsystem\u2022TSS\textends\tmultiprogramming\tto\thandle\tmultiple\tinteractive\tjobs\u2022Processor\u2019s\ttime\tis\tshared\tamong\tmultiple\tusers\u2022Multiple\tusers\tsimultaneously\taccess\tthe\tsystem\tthrough\tterminals"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 19,
+    "text": "Time-Sharing\tSystems\u2013Interactive\tComputing\t\u2022The\tCPU\tis\tmultiplexed\tamong\tseveral\tjobs\tthat\tare\tkept\tin\tmemory\tand\ton\tdisk\t(the\tCPU\tis\tallocated\tto\ta\tjob\tonly\tif\tthe\tjob\tis\tin\tmemory).\u2022when\tthe\toperating\tsystem\tfinishes\tthe\texecution\tof\tone\tcommand,\tit\tseeks\tthe\tnext\t\u201ccontrol\tstatement\u201d\tnot\tfrom\ta\tcard\treader,\tbut\trather\tfrom\tthe\tuser\u2019s\tkeyboard.\u2022On-line\tsystem\tmust\tbe\tavailable\tfor\tusers\tto\taccess\tdata\tand\tcode."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 20,
+    "text": "Time\tSharing\tsystem\t(TSS)\u2022A\ttime-shared\toperating\tsystem\tuses\tCPU\tscheduling\tand\tmultiprogramming\tto\tprovide\teach\tuser\twith\ta\tsmall\tportion\tof\ta\ttime-shared\tcomputer.\u2022Since\teach\taction\tor\tcommand\tin\ta\ttime-shared\tsystem\ttends\tto\tbe\tshort,\tonly\ta\tlittle\tCPU\ttime\tis\tneeded\tfor\teach\tuser.\u2022\tAs\tthe\tsystem\tswitches\trapidly\tfrom\tone\tuser\tto\tthe\tnext,\t\u2013each\tuser\tis\tgiven\tthe\timpression\tthat\tshe\thas\ther\town\tcomputer,\twhereas\tactually\tone\tcomputer\tis\tbeing\tshared\tamong\tmany\tusers."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 21,
+    "text": "Server\toperating\tsystems\u2022ThisOSrunsonserverswhichareverylargePC,workstationsorevenmainframes.\u2022Theyservemultipleusersatonceoveranetworkandallowtheuserstosharehardware&softwareresources.\u2022Itprovidesprintservices,fileserviceorwebservice.\u2022Ithandlestheincomingrequestsfromclients.\u2022Examples:Solaris,FreeBSD,andLinuxandWindowsServer200x."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 22,
+    "text": "Multiprocessor\toperating\tsystems\t(Parallel\tSystem)\u2022A\tcomputer\tsystem\tconsist\ttwo\tor\tmore\tCPUs\tis\tcalled\tmultiprocessor.\u2022Itisalsocalledparallelcomputers,\tmulticomputer\tormultiprocessor.\u2022TheyneedspecialOSorsomevariationsonserverOSwithspecialfeaturesforcommunication,connectivityandconsistency.\u2022Examples:WindowsandLinux."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 23,
+    "text": "Parallel\tSystem\u2013Increased\tthroughput:\t\u2022\tBy\tincreasing\tnumber\tof\tprocessors\twe\thope\tto\tget\tmore\twork\tdone\tin\tshorter\tperiod\tof\ttime.\u2013Economical\t\u2022\tThe\tprocessors\tcan\tshare\tperipherals,\tcabinets\tand\tpower\tsupplies.\u2022\tIf\t\tseveral\tprograms\tare\tto\toperate\ton\tsame\tdata\t\u2013Increased\treliability\u2022\tThe\tfailure\tof\tone\tprocessor\twill\tnot\thalt\tthe\tsystem,\tif\tfunctions\tcan\tbe\tdistributed\tproperly\tamong\tseveral\tprocessors."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 24,
+    "text": "Real\tTime\tSystem\u2022A\treal-time\toperating\tsystem\t(RTOS)\tis\tanoperating\tsystem\tthat\tguarantees\ta\tcertain\tcapability\twithin\ta\tspecified\ttime\tconstraint.\u2022Hard\treal-time\tsystem,\tif\tthe\tsystem\tfails\tto\tmeet\tthe\tdeadline\teven\tonce\tthe\tsystem\tis\tconsidered\tto\thave\tFailed.\tEx-\tDefense\tapplications,\tnuclear\tsystem\tetc.\u2022Soft\treal-time\tsystem,\teven\tif\tthe\tsystem\tfails\tto\tmeet\tthe\tdeadline,\tpossibly\tmore\tthan\tonce\t(i.e.\tfor\tmultiple\trequests),\tthe\tsystem\tis\tnot\tconsidered\tto\thave\tfailed.\tBut,\tin\tthis\tcase\tthe"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 25,
+    "text": "t\tconsidered\tto\thave\tfailed.\tBut,\tin\tthis\tcase\tthe\tresults\tof\tthe\trequests\tare\tnot\tworthless.\tEx-\taudio-video\tstreaming\tetc."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 26,
+    "text": "Distributed\tSystem\u2022Distribute\tthe\tcomputation\tamong\tseveral\tphysical\tprocessors.\u2022Loosely\tcoupled\tsystem\t\u2013\teach\tprocessor\thas\tits\town\tlocal\tmemory;\tprocessors\tcommunicate\twith\tone\tanother\tthrough\tvarious\tcommunications\tlines,\tsuch\tas\thigh-speed\tbuses\tor\ttelephone\tlines.\u2022Advantages\tof\tdistributed\tsystems.\u00fcResources\tSharing\t\u00fcComputation\tspeed\tup\t\u2013\tload\tsharing\t\u00fcReliability\u00fcCommunications"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 27,
+    "text": "Embedded\toperating\tsystems\u2022This\tOS\tis\tinstalled\tin\tATMs,\tprinters,\tcalculators\tand\twashing\t\tmachine.\u2022It\truns\ton\tthe\tcomputer\tthat\tcontrol\tdevices.\u2022It\tneither\tallow\tto\tdownload\tnew\tsoftware\tnor\taccept\tuser\tinstalled\tsoftware.\tSo\tthere\tis\tno\tneed\tfor\tprotection.\u2022Examples:\tQNX,\tVxWorks."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 28,
+    "text": "Sensor\tnode\toperating\tsystems\u2022Networkoftinysensornodesarebeingdevelopedfornumerouspurpose.\u2022EachnodesaretinycomputerswithaCPU,RAM,ROMandoneormoreenvironmentalsensors.\u2022TheOSinstalledinthesenodesaresensornodeOS.\u2022Theycommunicatewitheachotherandwithbasestationusingwirelesscommunication.\u2022Thesesensornetworkareusedtoprotectareaofbuilding,detectfiresinforest,measuretemperature.\u2022Examples:TinyOS."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 29,
+    "text": "Smart\tcard\toperating\tsystems\u2022SmallestOSrunonsmartcardswhicharecreditcardsizeddevicescontainingCPUchip.\u2022TheseOSareinstalledonelectronicpaymentscardssuchasdebitcard,creditcardetc.\u2022Theyhavelimitedprocessingpower.\u2022SomesmartcardsareJavaoriented.ROMonsmartcardholdsaninterpreterfortheJVM\u2013smallprogram.\n37"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 30,
+    "text": "37\nPersonal\tComputer\tsystem\u2022Personal\tcomputers\t\u2013\tcomputer\tsystem\tdedicated\tto\ta\tsingle\tuser.\u2022I/O\tdevices\t\u2013\tkeyboards,\tmice,\tdisplay\tscreens,\tsmall\tprinters.\u2022User\tconvenience\tand\tresponsiveness.\u2022Can\tadopt\ttechnology\tdeveloped\tfor\tlarger\toperating\tsystem\u2019\toften\tindividuals\thave\tsole\tuse\tof\tcomputer\tand\tdo\tnot\tneed\tadvanced\tCPU\tutilization\tof\tprotection\tfeatures.\nWhere\tOS\tlies?\tStructure\n\u2022OSliesbetweenhardwareanduserprogram.\u2022It\tacts\tas\tan\tinterface\tbetween\tthe\tuser\tand\tthehardware."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 31,
+    "text": "Web  browserE-mail  readerMusic  player\nUserProgram\nOperatingSystemSoftwareHardware"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 32,
+    "text": "1.KernelModeohas\tcomplete\taccess\tto\tall\t\tthe\thardwareocan\texecute\tany\tinstruction\tthat\ta\tmachine\t\tis\tcapable\tof\texecutingohas\thigh\tprivileged\t(rights)2.UserModeocan\texecute\tonly\tsubset\t(few)\tof\tthe\tmachine\tinstructionsoLess\tprivileged\t(rights)Modes\tof\toperation\tof\tcomputer\nWeb  browserE-mail  readerMusic  player\nUserProgram\nOperatingSystemS/WH/WUser  ModeKernel  Mode"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 33,
+    "text": "Why\tand\tHow\tswitch\toccur\nWeb  browserTurboMusic  Cplayer\nUserProgram\nOperatingSystemS/WH/WUser  ModeKernel  Mode\n\u2022User\tis\twriting\tprogram\tinC.\u2022Once\tfinish\twriting\t\twill\texecute\titvTo\texecute\tthis\tprogram1.Loadprograminto\t\tRAM2.Program\tis\texecuted\tby\t\tprocessoruser-mode\tprogram\t\tperforms\ttrapinstruction\n241"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 34,
+    "text": "241\nExample\t\u2013\tOS\tInvolvementAssume\twe\tare\tusing\tMS-Paint\ton\tWindows\t-\twhen\tdo\twe\tneed\tto\taccess\tthe\tOS?\u2013Loading\tthe\tapplication\t/\tterminating\tthe\tapplication\u2013Memory\tallocation\t/\tmanagement\t(e.g.,\tpaging)\u2013Access\tto\tIO\tdevices\t\u2013\tkeyboard,\tmouse,\tprinter,\tmonitor\u2013CPU\tallocation\u2013Copy\t/\tPaste\t(inter-process\tcommunication)\nOS\tServices\t/\tTask\tof\tOSDefinition\tof\tOperating\tSystemvAn\tOperating\tSystem\t(OS)\tis\ta\tcollection\tof\tsoftware\tthat\u2022manages\thardware\tresources\u2022provides\tvarious\tservice\tto\tthe\tusers\n43"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 35,
+    "text": "43\nOS\tServices\t/\tTask\tof\tOS1.Programdevelopment\u2022It\tprovides\teditors\tand\tdebuggers\tto\tassist\t(help)\tthe\tprogrammer\t\tin\tcreatingprograms.\n44\nOS\tServices\t/\tTask\tof\tOS2.Programexecution\u2022Followingtasksneedtobeperformtoexecuteaprogram:\u00a7Instructionsanddatamustbeloadedintomainmemory.\u00a7I/O\tdevices\tand\tfiles\tmust\tbeinitialized.\u2022The\tOS\thandles\tall\tthese\tduties\tfor\ttheuser.\n45"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 36,
+    "text": "45\nOS\tServices\t/\tTask\tof\tOS3.Access\tto\tI/O\tdevices\t(Resource\tallocation)\u2022A\trunning\tprogram\tmay\trequire\tI/O,\twhich\tmay\tinvolve\tfile\tor\tan\t\tI/O\tdevice.\u2022Forefficiencyandprotection,userscannotcontrolI/Odevices\t\tdirectly.\u2022Therefore,theOScontrolstheseI/Odevicesandprovidesto\t\tprogram\tas\tper\trequirement.\n46"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 37,
+    "text": "46\nOS\tServices\t/\tTask\tof\tOS4.Memory\tmanagement\u2022OSmanagesmemoryhierarchy.\u2022OSkeepsthetrackofwhichpartofmemoryareainuseandfreememory.\u2022Itallocatesmemorytoprogramwhentheyneedit.\u2022Itde-allocatethememorywhentheprogramfinishexecution.\nP2P1\nOS\tServices\t/\tTask\tof\tOS5.Controlled\taccessto\tfile\u2022In\tcase\tof\tfile\taccess,\tOS\tprovides\ta\tdirectory\thierarchy\tfor\teasy\t\taccess\tand\tmanagement\tof\tfile.\u2022OS\tprovides\tvarious\tfile\thandling\tcommands\tusing\twhich\tuser\tcan\t\teasily\tread,\twrite\tand\tmodify\tfile."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 38,
+    "text": "OS\tServices\t/\tTask\tof\tOS6.Communication\u2022Inmultitaskingenvironment,theprocessesneedtocommunicatewitheachotherandtoexchangetheirinformation.\u2022Operatingsystemperformsthecommunicationamongvarioustypesofprocessesintheformofsharedmemory."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 39,
+    "text": "OS\tServices\t/\tTask\tof\tOS7.Error\tdetection\tandresponse\u2022AnerrormayoccurinCPU,inI/Odevicesorinthememory\t\thardware.\u2022Followingarethemajoractivitiesofanoperatingsystemwith\t\trespect\tto\terror\thandling\t\u2212\u00a7The\tOS\tconstantly\tchecks\tfor\tpossible\terrors.\u00a7The\tOS\t\ttakes\tan\tappropriate\taction\tto\tensure\tcorrectandconsistentcomputing."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 40,
+    "text": "OS\tServices\t/\tTask\tof\tOS8.Accounting\u2022Keepingatrackofwhichusersareusinghowmuchandwhatkindsofcomputerresourcescanbeusedforaccountingorsimplyforaccumulatingusagestatistics.\u2022Usagestatisticsisusedtoreconfigurethesystemtoimprovecomputingservices.\n\nOS\tServices\t/\tTask\tof\tOS9.Protection\t&Security\u2022Protection\tinvolves\tensuring\tthat\tall\taccesses\tto\tsystem\tresources\t\tiscontrolled.\u2022To\tmake\ta\tsystem\tsecure,\tthe\tuser\tneeds\tto\tauthenticate\thimself\t\tor\therself\tto\tthesystem."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 41,
+    "text": "OS\tServices\t/\tTask\tof\tOS\t(Revision)1.Programdevelopment2.Programexecution3.Access\tto\tI/Odevices4.Memorymanagement5.Controlled\taccess\ttofile6.Communication7.Error\tdetection\tandresponse8.Accounting9.Protection\t&Security\nVirtualization\u2022The\tprocess\tof\tcreating\ta\tvirtual\tversion\tof\tphysical\tresources\t(hardware,\tstorage,\tnetwork,\tOS,\tetc.).\u2022Virtualization\tabstracts\tresources.\u2022Enables\tmultiple\tsystems\tto\toperate\ton\ta\tsingle\thardware\tplatform.\nVirtualization"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 42,
+    "text": "Why\tVirtualization\tMattersBenefits:\u2022Optimizes\thardware\tusage.\u2022Reduces\tcosts.\u2022Enables\tscalability\tand\tflexibility.\u2022Improves\tdisaster\trecovery.Real-World\tUse\tCases:\u2022Cloud\tservices.\u2022Application\ttesting.\u2022Server\tconsolidation.\nTypes\tof\tVirtualization\u2022Hardware\tVirtualization:\u2022Virtual\tMachines\t(e.g.,\tVMware,\tVirtualBox)\u2022Software\tVirtualization:\u2022Virtual\tOperating\tSystems\u2022Storage\tVirtualization:\u2022Logical\tstorage\tpools\t(e.g.,\tRAID,\tSAN)\u2022Network\tVirtualization:\u2022Abstracting\tnetwork\tresources\t(e.g.,\tVLANs)"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 43,
+    "text": "Virtual\tMachines\tand\tHypervisors\u2022Virtual\tMachines\t(VMs):\u2022Definition:\tSoftware\temulation\tof\thardware.\u2022Example:\tRunning\tLinux\ton\ta\tWindows\tsystem.\u2022Hypervisors:\u2022Type\t1\t(Bare-metal):\tDirectly\ton\thardware\t(e.g.,\tVMware\tESXi).\u2022Type\t2\t(Hosted):\tOn\tan\toperating\tsystem\t(e.g.,\tVirtualBox).\nReal-World\tApplications\u2022Cloud\tComputing:\tAWS,\tAzure,\tGCP\u2022Development\tEnvironments:\tTesting\tisolated\tapps.\u2022Server\tConsolidation:\tReducing\thardware.\u2022Disaster\tRecovery:\tBackup\tand\trestore\tcapabilities.\nThank\tyou\n\ud83d\ude42"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 44,
+    "text": "Thank\tyou\n\ud83d\ude42\nAdditional\tStudy\tMaterial\t\nSystem\tcalls\u2022The\tinterface\tbetween\tOS\tand\tuser\tprogram\tis\tdefined\tby\tthe\tset\t\tof\tsystem\tcalls\tthat\tOS\tprovides.\u2022System\tcalls\tvary\tfrom\tOS\tto\tOS.Example:InUnixReadsystemcallis\u2022count=read(fd,buffer,nbytes)\u2022fdisafiledescriptor.\u2013Whenafileisopened,permissionsarechecked.\u2013Ifaccessisallowed,anumber(fd)isreturned.\u2013Thenfilecanberead/written.\u2022nbytesisnumberofbytestoread\u2022bufferiswherereaddeposits(stores)thedata62\nSystem\tcalls"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 45,
+    "text": "System\tcalls\t(Cont\u2026)Return\tto\tcaller\tTrap\tto\tthe\tkernelPut\tcode\tfor\tread\tin\tregisterIncrement\tSP\t\tCall\tread\t\tPush\tfdPush\t&buffer\t\tPush\tnbytesDispatchSys\tcall\t\thandler\n321\n5\n7\n8\n11\n10\n9\n6\n4Library\t\tprocedure\t\treadUser\t\tprogram\t\tcalling\treadUser\t\tspaceKernel\t\tspacePush\t\tparameter\t\tonto\tstackCall\tto\tlibrary\tproc\nSystem\tCalls\t(Cont\u2026)\n40\nSystem\tCalls\t(Cont\u2026)"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 46,
+    "text": "Roles\tof\tOS\t(OS\tcan\tbe\tviewed\tas)1.The\tOS\tas\tan\tExtended/Virtual\tMachine2.The\tOS\tas\ta\tResource\tManager\nOS\tas\tResource\tManagervThere\tare\tlots\tof\tresources\tin\tcomputer\tsystem\u2022CPU\t(Processor)\u2022Memory\u2022I/O\tdevices\tsuch\tas\thard\tdisk,\tmouse,\tkeyboard,\tprinter,\tscanner\t\tetc.vIf\ta\tcomputer\tsystem\tis\tused\tby\tmultiple\tapplications\t(or\tusers),\t\tthen\tthey\twill\tcompete\tfor\tthese\tresources."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 47,
+    "text": "OS\tas\tResource\tManagervItisthejobofOStoallocate\tthese\tresources\tto\tthe\tvarious\t\tapplications\tso\tthat:oThe\tresources\tare\tallocated\tfairly\t(equally)\nP1P2P3P4Wants\tto\tprint\t50linesWants\tto\tprint\t20linesWants\tto\tprint\t15linesWants\tto\tprint\t15linesAfter\tprinting\t10\tlines\tofP1After\tprinting\t20\tlines\tofP1\nOS\tas\tResource\tManagervItisthejobofOStoallocate\tthese\tresources\tto\tthe\tvarious\t\tapplications\tso\tthat:oThe\tresources\tare\tallocated\tprotected\tfrom\tcross-access"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 48,
+    "text": "P1P2P3P4Wants\tto\tprint\t50linesWants\tto\tprint\t20linesWants\tto\tprint\t15linesWants\tto\tprint\t15linesAfter\tprinting\t10\tlines\tofP1After\tprinting\t20\tlines\tofP1\nOS\tas\tResource\tManagervItisthejobofOStoallocatetheseresourcestothe\tvarious\t\tapplications\tso\tthat:\u2022Deadlock\tare\tdetected,\tresolved\tand\tavoided."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 49,
+    "text": "OS\tas\tResource\tManager\t(Cont\u2026)vResourcemanager\u2013sharingresourcesintwodifferentways:1.In\ttime\tsharing/multiplexing\t(i.eCPU)"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 50,
+    "text": "OS\tas\tResource\tManager\t(Cont\u2026)vResourcemanager\u2013sharingresourcesintwodifferentways2.In\tspace\tsharing/multiplexing.\t(i.eMemory)\nProcess  1Process  2Process  3Empty  SpaceMainMemory20\nBasic\tresources\tof\tcomputer\tsystemvFollowing\tare\tthe\tresources\tof\tcomputer\tsystem,\tmanaged\tand\tallocated\tby\tOperating\tSystem:\u2013CPU\t(Central\tProcessing\tUnit)/\tProcess\tManagement\u2013Memory\tManagement\u00a7Primary\tMemory\u00a7Secondary\tMemory\u2013File\tsystem\u2013I/o\tDevice"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 51,
+    "text": "Process\tManagement\tOS\tas\tResource\tAllocator\u2022A\tprocess\tis\ta\tprogram\tin\texecution.\t\tA\tprocess\tneeds\tcertain\tresources,\tincluding\tCPU\ttime,\tmemory,\tfiles,\tand\tI/O\tdevices,\tto\taccomplish\tits\ttask.\u2022The\toperating\tsystem\tis\tresponsible\tfor\tthe\tfollowing\tactivities\tin\tconnection\twith\tprocess\tmanagement.\u2013Process\tcreation\tand\tdeletion.\u2013process\tsuspension\tand\tresumption.\u2013Provision\tof\tmechanisms\tfor:\u2022process\tsynchronization\u2022process\tcommunication"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 52,
+    "text": "Main\tMemory\tManagement\tOS\tas\tresource\tallocator\u2022Memory\tis\ta\tlarge\tarray\tof\twords\tor\tbytes,\teach\twith\tits\town\taddress.\t\tIt\tis\ta\trepository\tof\tquickly\taccessible\tdata\tshared\tby\tthe\tCPU\tand\tI/O\tdevices.\u2022Main\tmemory\tis\ta\tvolatile\tstorage\tdevice.\t\tIt\tloses\tits\tcontents\tin\tthe\tcase\tof\tsystem\tfailure.\u2022The\toperating\tsystem\tis\tresponsible\tfor\tthe\tfollowing\tactivities\tin\tconnections\twith\tmemory\tmanagement:\u2013Keep\ttrack\tof\twhich\tparts\tof\tmemory\tare\tcurrently\tbeing\tused\tand\tby\twhom.\u2013Decide\twhich\tprocesses\tto"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 53,
+    "text": "being\tused\tand\tby\twhom.\u2013Decide\twhich\tprocesses\tto\tload\twhen\tmemory\tspace\tbecomes\tavailable.\u2013Allocate\tand\tdeallocate\tmemory\tspace\tas\tneeded."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 54,
+    "text": "Secondary\tStorage\tmanagement\tOS\tas\tResource\tallocator\u2022Since\tmain\tmemory\t(primary\tstorage)\tis\tvolatile\tand\ttoo\tsmall\tto\taccommodate\tall\tdata\tand\tprograms\tpermanently,\tthe\tcomputer\tsystem\tmust\tprovide\tsecondary\tstorage\tto\tback\tup\tmain\tmemory.\u2022Most\tmodern\tcomputer\tsystems\tuse\tdisks\tas\tthe\tprinciple\ton-line\tstorage\tmedium,\tfor\tboth\tprograms\tand\tdata.\u2022The\toperating\tsystem\tis\tresponsible\tfor\tthe\tfollowing\tactivities\tin\tconnection\twith\tdisk\tmanagement:\t\u2013Free\tspace\tmanagement\u2013Storage\tallocation\u2013Disk\tsc"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 55,
+    "text": "\u2013Free\tspace\tmanagement\u2013Storage\tallocation\u2013Disk\tscheduling"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 56,
+    "text": "I/O\tSystem\tManagementOS\tas\tresource\tallocatorThe\tI/O\tsystem\tconsists\tof:\u2013A\tbuffer-caching\tsystem\t\u2013A\tgeneral\tdevice-driver\tinterface\u2013Drivers\tfor\tspecific\thardware\tdevices"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 57,
+    "text": "File\tManagementOS\tas\tresource\tallocator\u2022A\tfile\tis\ta\tcollection\tof\trelated\tinformation\tdefined\tby\tits\tcreator.\t\tCommonly,\tfiles\trepresent\tprograms\t(both\tsource\tand\tobject\tforms)\tand\tdata.\u2022The\toperating\tsystem\tis\tresponsible\tfor\tthe\tfollowing\tactivities\tin\tconnections\twith\tfile\tmanagement:\u2013File\tcreation\tand\tdeletion.\u2013Directory\tcreation\tand\tdeletion.\u2013Support\tof\tprimitives\tfor\tmanipulating\tfiles\tand\tdirectories.\u2013Mapping\tfiles\tonto\tsecondary\tstorage.\u2013File\tbackup\ton\tstable\t(nonvolatile)\tstorage\tmedia"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 58,
+    "text": "\u2013File\tbackup\ton\tstable\t(nonvolatile)\tstorage\tmedia."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 59,
+    "text": "Protection\tSystemOS\tas\tcontrol\tprogram\u2022Protection\trefers\tto\ta\tmechanism\tfor\tcontrolling\taccess\tby\tprograms,\tprocesses,\tor\tusers\tto\tboth\tsystem\tand\tuser\tresources.\u2022The\tprotection\tmechanism\tmust:\t\u2013distinguish\tbetween\tauthorized\tand\tunauthorized\tusage.\u2013specify\tthe\tcontrols\tto\tbe\timposed.\u2013provide\ta\tmeans\tof\tenforcement."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 60,
+    "text": "OS\tas\tExtended\tMachineThe\tarchitecture\tof\ta\tcomputer\tis\tdifficult\tto\tprogram\u2022Architecture(instructionset,memoryorganization,I/O,busstructure)ofmostofcomputeratthemachinelevellanguageisprimitiveandawkwardtoprogram.\u2022Example:\tIf\tuser\twant\tto\tread\tfrom\tfloppy\tor\thard\tdisk:"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 61,
+    "text": "OS\tas\tExtended\tMachine\n\u2022Example:\tIf\tuser\twant\tto\tread\tfrom\tfloppy\tor\thard\tdisk:User\thas\tto\twrite\tcommand\tand\t\taddress\tto\tthe\tdisk\tcontroller\tand\t\tthen\tinitiate\tthe\tI/ODisk\tController\nOS\tas\tExtended\tMachine\n\u2022Example:\tIf\tuser\twant\tto\tread\tfrom\tfloppy\tor\thard\tdisk:The\tdisk\tcontroller\twill\tfind\tthe\trequesteddata\tin\tthe\tdisk\tand\tfetch\tit\tfrom\tdisk\tto\t\tdisk\tcontroller\tbuffer.\nUserhastocheckthestatusofdiskcontrolleroperationwhereithasfinishedornot.\nOS\tas\tExtended\tMachine"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 62,
+    "text": "OS\tas\tExtended\tMachine\n\u2022Example:\tIf\tuser\twant\tto\tread\tfrom\tfloppy\tor\thard\tdisk:Ifsuccess,thedatafromdiskcontrollerbuffershouldbemovedtomainmemory(totheapplicationbuffer)."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 63,
+    "text": "OS\tas\tExtended\tMachine\t(Cont\u2026)\u2022Ifalltheuserswillhavetodothesemessydetails:\u2022Theprogramwillbeverydifficulttowriteandquitelong.\u2022Theprogramwillbehardwaredependent.\u2022Userdon\u2019twanttobeinvolvedinprogrammingofstoragedevices.\u2022Therefore,anOSprovidesasetofbasiccommandsorinstructionstoperformvariousoperationssuchasread,write,modify,saveorclose.\u2022Dealingwiththesecommandiseasierthandirectlydealingwithhardware.\u2022Operatingsystemhidesthecomplexityofhardwareandpresentabeautifulinterfacetotheusers."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 64,
+    "text": "Operating\tsystem\tstructures1.Monolithic\tsystems2.Layered\tsystems3.Microkernel4.Client-server\tmodel5.Virtual\tmachines\u2022VM/370\u2022Virtual\tmachines\trediscovered\u2022The\tjava\tvirtual\tmachine6.Exokernels\nMonolithic\tsystems\u2022TheentireOSrunsasasingleprograminkernelmode.\u2022OSiswrittenasacollectionofprocedures,linkedtogetherintoasinglelargeexecutablebinaryprogram.\u2022Eachprocedurehaswelldefinedinterfaceintermsofparameterandresults,andeachoneisfreetocallanyotherone."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 65,
+    "text": "Main\t\tProcedureService  ProceduresUtility\t\tProcedure\u2022Amainprogramthatinvoketherequestedserviceprocedure.\u2022Asetofserviceproceduresthatcarryoutthesystemcalls.\u2022Asetofutilityproceduresthathelptheserviceprocedure.\nLayered\tsystems\u2022In\tthis\tsystem,\tthe\tOS\tis\torganized\tas\ta\thierarchy\tof\tlayers.\u2022The\tfirst\tsystem\tconstructed\tin\tthis\tway\twas\tTHE\tsystem."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 66,
+    "text": "Architecture\tof\tTHE\tsystemLayerFunctionDescription5The\toperatorOperator\twas\tlocated.4User\tProgramsUser\tprograms\twere\tfound.3Input\t/\tOutput\t\tManagementTakes\tcare\tof\tmanaging\tthe\tI/O\tdevices.\t\tBuffering\tthe\tinformation.2Operator-process\t\tcommunicationHandles\tcommunication\tbetween\teach\tprocess\tand\t\tthe\toperator\tconsole\t(i.e.\tuser).1Memory\tand\t\tdrum\t\tmanagementDid\tthe\tmemory\tmanagement.Allocatedspaceforprocessinmainmemoryandona512Kworddrumusedforholdingpartsofprocessesforwhichtherewasnoroominmemory"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 67,
+    "text": "dingpartsofprocessesforwhichtherewasnoroominmemory.0Processor\t\tallocation\tand\t\tmulti-programmingProvided\tthe\tbasic\tmultiprogramming\tof\tthe\tCPU.\t\tDealtwithallocationoftheprocessor,\tswitching\t\tbetween\tprocesses\twhen\tinterrupts\toccurred\tor\t\ttimers\texpired."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 68,
+    "text": "Microkernel\u2022Inlayeredapproach,thedesignerhavechoicewheretodrawthekernelandusermodeboundary.\u2022Itisbettertoputaslittleaspossibleinkernelmodebecausebugsinthekernelcanbringdownthesysteminstantly.\u2022ThemicrokerneldesignprovideshighreliabilitybysplittingOSupintosmallwelldefinedmodules,onlyonemoduleruninkernelandrestofallruninusermode.\u2022Aseachdevicedriverrunsasauserprocess,abuginaudiodriverwillcausethesoundtobestop,butnotcrashthecomputer.\u2022Examples:Integrity,K42,QNX,SymbianandMINIX3.\nMicrokernel\t(Cont\u2026)"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 69,
+    "text": "Microkernel\t(Cont\u2026)\n\u2022Kernel\tcontains\tonly\u2022Sys\t(Kernel\tcall\thandler)\u2022Clock\t(because\tscheduler\tinteract\twith\tit)"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 70,
+    "text": "Client-Server\tmodel\u2022Processesindividedintointotwocategories\u2022Servers:provideservices\u2022Clients:usesservices\u2022Clientandserverrunondifferentcomputers,connectedbyLANorWANandcommunicateviamessagepassing.\u2022Toobtainaservice,aclientconstructamessagesayingwhatitwantsandsendittoserver.\u2022Theserverthendoestheworkandsendbacktheanswer."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 71,
+    "text": "Virtual\tmachines\u2022TheinitialreleasesofOS/360werestrictlybatchsystems.\u2022Butmanyuserswantedtobeabletoworkinteractivelyataterminal,soOSdesignersdecidedtowritetimesharingsystemsforit.\u2022TypesofVirtualmachinesare:\u2022VM/370\u2022VirtualMachinesRediscovered\u2022TheJavaVirtualMachine\nVM/370"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 72,
+    "text": "VM/370\n\u2022Virtualmachinemonitorrunonthebarehardwareanddoesthemultiprogramming.\u2022Eachvirtualmachineisidenticaltothetruehardware;eachonecanrunanyOS(maybedifferent)thatwillrundirectlyonthebarehardware.\u2022OnVM/370,somerunOS/360whiletheothersrunsingleuserinteractivesystemcalledCMS(ConversationalMonitorSystem)forinteractivetimesharingusers."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 73,
+    "text": "VM/370\t(Cont\u2026)\n\u2022WhenCMSprogramexecutedasystemcall,acallwastrappedtotheoperatingsysteminitsownvirtualmachine,notonVM/370.\u2022CMSthenissuedthenormalhardwareI/Oinstructionforreadingitsvirtualdiskorwhateverwasneededtocarryoutthecall.\u2022TheseI/OinstructionsweretrappedbyVM/370whichthenperformsthem."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 74,
+    "text": "Virtual\tMachines\tRediscovered\n\u2022Companiescanruntheirmailservers,webservers,FTPserversandotherserversonthesamemachinewithouthavingacrashofoneserverbringdowntherest.\u2022Webhostingcompanyoffersvirtualmachinesforrent,whereasinglephysicalmachinecanrunmanyvirtualmachines;eachoneappearstobeacompletemachine.\u2022Customers\twho\trent\ta\tvirtual\tmachine\tcan\trun\tany\tOS\tor\tsoftware."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 75,
+    "text": "Virtual\tMachines\tRediscovered\t(Cont\u2026)\n\u2022Anotheruseofvirtualizationisforenduserswhowanttobeabletoruntwoormoreoperatingsystemsatthesametime,sayWindowsandLinux.\u2022Type\t1\thypervisors\truns\ton\tthe\tbare\thardware.\u2022Type\t2\thypervisors\trun\tas\tapplication\tprograms\ton\ttop\tof\tWindows,\tLinux,\tor\tsome\tother\toperating\tsystem,\tknown\tas\tthe\t\thost\toperating\tsystem."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 76,
+    "text": "\u2022WhenSunMicrosystemsinventedtheJavaprogramminglanguage,italsoinventedavirtualmachinecalledtheJVM(JavaVirtualMachine).\u2022TheJavacompilerproducescodeforJVM,whichthentypicallyisexecutedbyasoftwareJVMinterpreter.\u2022TheadvantageisthattheJVMcodecanbeshippedovertheinternettoanycomputerthathasaJVMinterpreterandrunthere.Java\tVirtual\tMachine"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 77,
+    "text": "Exokernels\u2022Ratherthancloning(copying)theactualmachine,anotherstrategyispartitioningit(givingeachuserasubsetoftheresource).\u2022Forexampleonevirtualmachinemightgetdiskblocks0to1023,thenextonemightgetblock1024to2047,andsoon.\u2022Programrunningatthebottomlayer(kernelmode)iscalledtheexokernel.\u2022Itsjobistoallocateresourcestovirtualmachinesandthencontinuouslychecktomakesurenomachineistryingtousesomebodyelse\u2019sresources.\u2022Theadvantageoftheexokernelschemeisthatitsavesalayerofmapping."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 78,
+    "text": "Spooling\u2022It\tallows\tthe\tCPU\tto\tOverlap\tI/O\tof\tone\tjob\twith\tcomputation\tof\tother\tjobs.\u2022While\texecuting\tone\tjob,\tthe\tOS.\u2013Reads\tnext\tjob\tfrom\tcard\treader\tinto\ta\tstorage\tarea\ton\tthe\tdisk\t(job\tqueue).\u2013Outputs\tprintout\tof\tprevious\tjob\tfrom\tdisk\tto\tprinter.\u2013This\tprocess\tis\tcalled\tspooling.\u00a2Spooling\trefers\tto\tputting\tjobs\tin\ta\tbuffer,\ta\tspecial\tarea\tin\tmemory\tor\ton\ta\tdisk\twhere\ta\tdevice\tcan\taccess\tthem\twhen\tit\tis\tready.\u00a2Spooling\tis\tuseful\tbecause\tdevice\taccess\tdata\twith\tdifferent\trates.\tThe\tbuffer\tprovi"
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 79,
+    "text": "access\tdata\twith\tdifferent\trates.\tThe\tbuffer\tprovides\ta\twaiting\tstation\twhere\tdata\tcan\trest\twhile\tthe\tslower\tdevice\tcatches\tup."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 80,
+    "text": "Spooling\u00a2The\tmost\tcommon\tspooling\tapplication\tis\tprint\tspooling.\t\u2022In\tprint\tspooling,\tdocuments\tare\tloaded\tinto\ta\tbuffer\tand\tthen\tthe\tprinter\tpulls\tthem\toff\tfrom\tthe\tbuffer\tat\tits\town\trate.\u2022Each\tapplications\u2019\toutput\tis\tspooled\tto\ta\tseparate\tdisk\tfile.\u2022Copies\tthe\tqueued\tspool\tfiles\tto\tthe\tprinter\tone\tat\ta\ttime.\u2022Spooling\toverlaps\tthe\tI/O\tof\tone\tjob\twith\tthe\tcomputation\tof\tother\tjobs."
+  },
+  {
+    "doc_index": 0,
+    "source_file": "E-Notes_3100_Content_Document_20241220035234PM.pdf",
+    "chunk_number": 81,
+    "text": "Spooling\u00a2Job\tpool\t\u2013\tdata\tstructure\tthat\tallows\tthe\tOS\tto\tselect\twhich\tjob\tto\trun\tnext\tin\torder\tto\tincrease\tCPU\tutilization.\t\u00a2Spooling\tis\talso\tused\tfor\tprocessing\tdata\tat\tremote\tsites.\t\u2022The\tCPU\tsends\tthe\tdata\tvia\tcommunications\tpath\tto\ta\tremote\tprinter.\t\u00a2Spooling\tbatch\tsystems\twere\tthe\tfirst\tand\tare\tthe\tsimplest\tof\tthe\tmultiprogramming\tsystems."
+  }
+]

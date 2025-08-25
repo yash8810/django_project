@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+  /* Plans Page Styles */
+.subscription-plans {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.plans-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 300px;
+    position: relative;
+}
+
+.plan-card.popular {
+    border: 2px solid #f39c12;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #f39c12;
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.features li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.features li:before {
+    content: "✓";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+}
+
+.features li:has(✗) {
+    color: #e74c3c;
+}
+
+.btn-select, .btn-current {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-select {
+    background: #3498db;
+    color: white;
+}
+
+.btn-select:hover {
+    background: #2980b9;
+}
+
+.btn-current {
+    background: #2ecc71;
+    color: white;
+}</style>
+
+
+{% block content %}
+<div class="subscription-plans">
+  <h1>Choose Your Plan</h1>
+  <div class="plans-container">
+
+    <!-- Basic Plan -->
+    <div class="plan-card">
+      <h3>Basic</h3>
+      <div class="price">$5.00<span>/month</span></div>
+      <ul class="features">
+        <li>✓ 5 PDF uploads/month</li>
+        <li>✓ 3 questions/day</li>
+        <li>✓ 10-page limit</li>
+        <li>✗ No analytics</li>
+      </ul>
+      {% if current_plan == 'Basic' %}
+        <button class="btn-current">Current Plan</button>
+      {% else %}
+        <form id="basic-plan-form" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="plan_id" value="1">
+          <button type="button" class="btn-select" onclick="initiateCheckout(1)">Select Basic</button>
+        </form>
+      {% endif %}
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="plan-card popular">
+      <div class="popular-badge">MOST POPULAR</div>
+      <h3>Pro</h3>
+      <div class="price">$9.99<span>/month</span></div>
+      <ul class="features">
+        <li>✓ 50 PDF uploads/month</li>
+        <li>✓ Unlimited questions</li>
+        <li>✓ 50-page limit</li>
+        <li>✓ Basic analytics</li>
+      </ul>
+      {% if current_plan == 'Pro' %}
+        <button class="btn-current">Current Plan</button>
+      {% else %}
+        <form id="pro-plan-form" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="plan_id" value="2">
+          <button type="button" class="btn-select" onclick="initiateCheckout(2)">Upgrade to Pro</button>
+        </form>
+      {% endif %}
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="plan-card">
+      <h3>Enterprise</h3>
+      <div class="price">$29.99<span>/month</span></div>
+      <ul class="features">
+        <li>✓ Unlimited uploads</li>
+        <li>✓ Unlimited questions</li>
+        <li>✓ No page limit</li>
+        <li>✓ Advanced analytics</li>
+        <li>✓ API access</li>
+      </ul>
+      {% if current_plan == 'Enterprise' %}
+        <button class="btn-current">Current Plan</button>
+      {% else %}
+        <form id="enterprise-plan-form" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="plan_id" value="3">
+          <button type="button" class="btn-select" onclick="initiateCheckout(3)">Upgrade to Enterprise</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% block scripts %}
+  <script src="https://js.stripe.com/v3/"></script>  <!-- Stripe.js library -->
+  <script>
+    const stripe = Stripe("{{ STRIPE_PUBLISHABLE_KEY }}");  // Initialize Stripe
+    window.CHECKOUT_SESSION_URL = "{% url 'payment:create_checkout_session' %}";  // Your checkout URL
+  </script>
+  <script src="{% static 'assets/js/subscription.js' %}"></script>  <!-- Your JS -->
+{% endblock %}
+
+
+
+{% endblock %}
+
+

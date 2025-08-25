@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}All Uploaded Documents{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="page-title">Your Uploaded Documents</h1>
+
+    {% if uploaded_pdfs %}
+        <div class="document-grid">
+            {% for doc in uploaded_pdfs %}
+                <div class="document-card">
+                    <div class="document-icon">📄</div>
+                    <div class="document-info">
+                        <h3 class="doc-title">{{ doc.file_name }}</h3>
+                        <p class="doc-upload-date">
+                            Uploaded: 
+                            {% if doc.uploaded_at %}
+                                {{ doc.uploaded_at|date:"M d, Y" }}
+                            {% else %}
+                                Unknown
+                            {% endif %}
+                        </p>
+                        <div class="document-actions">
+                            <a href="{% url 'viewDocument' document.id %}" class="btn btn-outline btn-sm">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                            <a href="{% url 'analyzePdf' doc.id %}" class="btn-action analyze-btn">Analyze</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-documents">No documents uploaded yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

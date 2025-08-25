@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document Intelligence{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+  
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- in base.html (or plans.html before subscriptions.js) -->
+
+
+
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/"><i class="fas fa-file-alt"></i> Document Intelligence</a>
+            </div>
+            <nav class="navbar-nav">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'dashboard' %}" class="nav-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    
+                    <!-- User Dropdown -->
+                    <div class="user-dropdown">
+                        <button class="user-menu-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>{{ user.username }}</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
+                        <div class="user-dropdown-content">
+                            <a href="{% url 'profile' %}">
+                                <i class="fas fa-user"></i> Profile
+                            </a>
+                           <a href="{% url 'payment:plans' %}">
+                                <i class="fas fa-crown"></i> Subscription
+                            </a>
+                            
+                            <div class="dropdown-divider"></div>
+                            <a href="{% url 'logout' %}">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile menu button (optional) -->
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                {% else %}
+                    <a href="{% url 'login' %}" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="{% url 'register' %}" class="nav-link"><i class="fas fa-user-plus"></i> Register</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            {% block content %}{% endblock %}
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Document Intelligence. All rights reserved.</p>
+    </div>
+  </footer>
+
+ 
+</body>
+</html>
+
+{% block extra_head %}
+<style>
+.features li:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.features li:contains("✓"):before {
+  content: "\f00c";
+  color: #27ae60;
+}
+
+.features li:contains("✗"):before {
+  content: "\f00d";
+  color: #e74c3c;
+}
+</style>
+{% endblock %}
