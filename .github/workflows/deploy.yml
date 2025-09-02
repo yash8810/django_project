@@ -1,6 +1,5 @@
 name: Deploy Django App with Docker on Apache
 
-
 on:
   push:
     branches: fitfusionai
