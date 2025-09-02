@@ -23,3 +23,4 @@ ENV DJANGO_SETTINGS_MODULE=gymer.settings \
 
 # Run entrypoint
 ENTRYPOINT ["./entrypoint.sh"]
+

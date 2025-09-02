@@ -32,6 +32,7 @@ ph = PasswordHasher()
 
 # Function to insert a record into any table
 def insert_record(table_name, data):
+    print("")
     if not table_name or not data:
         return "Error: Missing table name or data."
 
