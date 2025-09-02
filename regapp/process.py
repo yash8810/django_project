@@ -12,6 +12,8 @@ data_folder = os.path.join(os.path.dirname(__file__), "regdata")
 documents = []
 chunk_metadata = []
 
+
+
 # List of specific JSON files to process
 json_files = [
     "dietplan.json", "recipes.json", "workoutplan_data.json"
