@@ -70,3 +70,4 @@ jobs:
         STRIPE_WEBHOOK_SECRECT: ${{ secrets.STRIPE_WEBHOOK_SECRECT }}
 
         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+
