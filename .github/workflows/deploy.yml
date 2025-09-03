@@ -1,5 +1,6 @@
 name: Deploy Django App with Docker on Apache
 
+
 on:
   push:
     branches: [fitfusionai]  # Trigger only on this branch
@@ -10,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout Repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3 
 
     - name: Set up SSH Agent
       uses: webfactory/ssh-agent@v0.8.0
