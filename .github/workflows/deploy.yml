@@ -1,9 +1,82 @@
-name: Deploy Django App with Docker on Apache
+# name: Deploy Django App with Docker on Apache
 
+
+# on:
+#   push:
+#     branches: [fitfusionai]
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout Repo
+#       uses: actions/checkout@v3
+
+#     - name: Set up SSH Agent
+#       uses: webfactory/ssh-agent@v0.8.0
+#       with:
+#         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+#     - name: Copy files to VPS
+#       run: |
+#         ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p ~/fitfusionai"
+#         scp -r . ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:~/fitfusionai
+
+#     - name: Build & Run Docker container on VPS
+#       run: |
+#         ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << EOF
+#           export DB_USER="${{ secrets.DB_USER }}"
+#           export DB_PASSWORD="${{ secrets.DB_PASSWORD }}"
+#           export DB_HOST="${{ secrets.DB_HOST }}"
+#           export DB_PORT="${{ secrets.DB_PORT }}"
+#           export DB_NAME="${{ secrets.DB_NAME }}"
+#           export DATABASE_URL="${{ secrets.DATABASE_URL }}"
+
+#           export STRIPE_PUBLIC_KEY="${{ secrets.STRIPE_PUBLIC_KEY }}"
+#           export STRIPE_SECRET_KEY="${{ secrets.STRIPE_SECRET_KEY }}"
+#           export STRIPE_WEBHOOK_SECRECT="${{ secrets.STRIPE_WEBHOOK_SECRECT }}"
+
+#           export GROQ_API_KEY="${{ secrets.GROQ_API_KEY }}"
+
+#           cd ~/fitfusionai
+#           docker stop fitfusionai || true
+#           docker rm fitfusionai || true
+
+#           docker build -t fitfusionai .
+
+#           docker run -d -p 8000:8000 --name fitfusionai \
+#             -e DB_USER="$DB_USER" \
+#             -e DB_PASSWORD="$DB_PASSWORD" \
+#             -e DB_HOST="$DB_HOST" \
+#             -e DB_PORT="$DB_PORT" \
+#             -e DB_NAME="$DB_NAME" \
+#             -e DATABASE_URL="$DATABASE_URL" \
+#             -e STRIPE_PUBLIC_KEY="$STRIPE_PUBLIC_KEY" \
+#             -e STRIPE_SECRET_KEY="$STRIPE_SECRET_KEY" \
+#             -e STRIPE_WEBHOOK_SECRECT="$STRIPE_WEBHOOK_SECRECT" \
+#             -e GROQ_API_KEY="$GROQ_API_KEY" \
+#             fitfusionai
+#         EOF
+#       env:
+#         DB_USER: ${{ secrets.DB_USER }}
+#         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+#         DB_HOST: ${{ secrets.DB_HOST }}
+#         DB_PORT: ${{ secrets.DB_PORT }}
+#         DB_NAME: ${{ secrets.DB_NAME }}
+#         DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+#         STRIPE_PUBLIC_KEY: ${{ secrets.STRIPE_PUBLIC_KEY }}
+#         STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+#         STRIPE_WEBHOOK_SECRECT: ${{ secrets.STRIPE_WEBHOOK_SECRECT }}
+
+#         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+
+name: Deploy Django App with Docker on Apache
 
 on:
   push:
-    branches: fitfusionai
+    branches: [fitfusionai]
 
 jobs:
   deploy:
@@ -18,14 +91,19 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+    - name: Add VPS to known hosts
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
     - name: Copy files to VPS
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p ~/fitfusionai"
+        ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p ~/fitfusionai"
         scp -r . ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:~/fitfusionai
 
     - name: Build & Run Docker container on VPS
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << EOF
+        ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
           export DB_USER="${{ secrets.DB_USER }}"
           export DB_PASSWORD="${{ secrets.DB_PASSWORD }}"
           export DB_HOST="${{ secrets.DB_HOST }}"
@@ -58,17 +136,3 @@ jobs:
             -e GROQ_API_KEY="$GROQ_API_KEY" \
             fitfusionai
         EOF
-      env:
-        DB_USER: ${{ secrets.DB_USER }}
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        DB_HOST: ${{ secrets.DB_HOST }}
-        DB_PORT: ${{ secrets.DB_PORT }}
-        DB_NAME: ${{ secrets.DB_NAME }}
-        DATABASE_URL: ${{ secrets.DATABASE_URL }}
-
-        STRIPE_PUBLIC_KEY: ${{ secrets.STRIPE_PUBLIC_KEY }}
-        STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-        STRIPE_WEBHOOK_SECRECT: ${{ secrets.STRIPE_WEBHOOK_SECRECT }}
-
-        GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-
