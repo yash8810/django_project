@@ -31,7 +31,7 @@ Retrieved Context:
 
     # Call Groq LLM
     result = client.chat.completions.create(
-        model="llama3-8b-8192",  # You can change this to other Groq-supported models
+        model="llama-3.1-8b-instant",  # ✅ Correct model name
         messages=[
             {"role": "system", "content": "You are a helpful and professional marketing assistant."},
             {"role": "user", "content": prompt.strip()}

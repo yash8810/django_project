@@ -1,9 +1,8 @@
 name: Deploy Django App with Docker on Apache
 
-
 on:
   push:
-    branches: [fitfusionai]  # Trigger only on this branch
+    branches: [main]  # Trigger only on this branch
 
 jobs:
   deploy:
@@ -11,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout Repo
-      uses: actions/checkout@v3 
+      uses: actions/checkout@v3
 
     - name: Set up SSH Agent
       uses: webfactory/ssh-agent@v0.8.0
@@ -20,8 +19,8 @@ jobs:
 
     - name: Copy files to VPS
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p ~/fitfusionai-django-new"
-        scp -r . ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:~/fitfusionai-django-new
+        ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p ~/fitfusionai"
+        scp -r . ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:~/fitfusionai
 
     - name: Build & Run Docker container on VPS
       run: |
@@ -39,13 +38,19 @@ jobs:
 
           export GROQ_API_KEY="${{ secrets.GROQ_API_KEY }}"
 
-          cd ~/fitfusionai-django-new
-          docker stop fitfusionai-django-new || true
-          docker rm fitfusionai-django-new || true
+          export DJANGO_SUPERUSER_USERNAME="${{ secrets.DJANGO_SUPERUSER_USERNAME }}"
+          export DJANGO_SUPERUSER_EMAIL="${{ secrets.DJANGO_SUPERUSER_EMAIL }}"
+          export DJANGO_SUPERUSER_PASSWORD="${{ secrets.DJANGO_SUPERUSER_PASSWORD }}"
 
-          docker build -t fitfusionai-django-new .
 
-          docker run -d -p 8000:8000 --name fitfusionai-django-new \
+          cd ~/fitfusionai
+          docker stop fitfusionai || true
+          docker rm fitfusionai || true
+
+          docker build -t fitfusionai .
+
+          docker run -d -p 8000:8000 --name fitfusionai \
+            -v /root/fitfusionai/staticfiles:/app/staticfiles \
             -e DB_USER="$DB_USER" \
             -e DB_PASSWORD="$DB_PASSWORD" \
             -e DB_HOST="$DB_HOST" \
@@ -56,7 +61,10 @@ jobs:
             -e STRIPE_SECRET_KEY="$STRIPE_SECRET_KEY" \
             -e STRIPE_WEBHOOK_SECRECT="$STRIPE_WEBHOOK_SECRECT" \
             -e GROQ_API_KEY="$GROQ_API_KEY" \
-            fitfusionai-django-new
+            -e DJANGO_SUPERUSER_USERNAME="$DJANGO_SUPERUSER_USERNAME" \
+            -e DJANGO_SUPERUSER_EMAIL="$DJANGO_SUPERUSER_EMAIL" \
+            -e DJANGO_SUPERUSER_PASSWORD="$DJANGO_SUPERUSER_PASSWORD" \
+            fitfusionai
         EOF
       env:
         DB_USER: ${{ secrets.DB_USER }}
@@ -69,5 +77,9 @@ jobs:
         STRIPE_PUBLIC_KEY: ${{ secrets.STRIPE_PUBLIC_KEY }}
         STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
         STRIPE_WEBHOOK_SECRECT: ${{ secrets.STRIPE_WEBHOOK_SECRECT }}
+
+        DJANGO_SUPERUSER_USERNAME: ${{ secrets.DJANGO_SUPERUSER_USERNAME }}
+        DJANGO_SUPERUSER_EMAIL: ${{ secrets.DJANGO_SUPERUSER_EMAIL }}
+        DJANGO_SUPERUSER_PASSWORD: ${{ secrets.DJANGO_SUPERUSER_PASSWORD }}
 
         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

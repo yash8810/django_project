@@ -35,7 +35,7 @@
 .subscription-header .price {
     font-size: 30px;
     font-weight: 700;
-    color: #3ad82e; /* Updated to new color */
+    color: #3db5e6; /* Updated to new color */
 }
 
 .subscription-body ul {
@@ -52,7 +52,7 @@
 }
 
 .subscription-footer .subscribe-btn {
-    background-color: #3ad82e; /* Updated to new color */
+    background-color: #3db5e6; /* Updated to new color */
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -63,11 +63,11 @@
 }
 
 .subscription-footer .subscribe-btn:hover {
-    background-color: #32b62d; /* Slightly darker shade for hover */
+    background-color: #3db5e6; /* Slightly darker shade for hover */
 }
 
 .gold {
-    border-left: 5px solid #3ad82e; /* Updated to new color */
+    border-left: 5px solid #3db5e6; /* Updated to new color */
 }
 
 .silver {
