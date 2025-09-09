@@ -1,5 +1,6 @@
 name: Deploy Django App with Docker on Apache
 
+
 on:
   push:
     branches: [fitfusionai]  # Trigger only on this branch
