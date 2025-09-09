@@ -4,6 +4,7 @@ on:
   push:
     branches: [fitfusionai]  # Trigger only on this branch
 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
