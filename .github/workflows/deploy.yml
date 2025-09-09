@@ -4,7 +4,6 @@ on:
   push:
     branches: [fitfusionai]  # Trigger only on this branch
 
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -50,7 +49,7 @@ jobs:
 
           docker build -t fitfusionai .
 
-          docker run -d -p 8000:8000 --name fitfusionai \
+          docker run -d -p 8001:8001 --name fitfusionai \
             -v /root/fitfusionai/staticfiles:/app/staticfiles \
             -e DB_USER="$DB_USER" \
             -e DB_PASSWORD="$DB_PASSWORD" \
