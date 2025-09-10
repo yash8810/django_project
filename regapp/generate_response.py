@@ -33,7 +33,7 @@ Retrieved Context:
     result = client.chat.completions.create(
         model="llama-3.1-8b-instant",  # ✅ Correct model name
         messages=[
-            {"role": "system", "content": "You are a helpful and professional marketing assistant."},
+            {"role": "system", "content": "You are a helpful and professional gym  assistant."},
             {"role": "user", "content": prompt.strip()}
         ],
         max_tokens=200,
